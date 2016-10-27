@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeviceOperationsViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8AI-3M-Ntv">
+                    <rect key="frame" x="22" y="107" width="277" height="55"/>
+                    <color key="backgroundColor" red="0.23921568630000001" green="0.80784313730000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="87q-13-R2Y"/>
+                        <constraint firstAttribute="height" constant="55" id="CSs-ED-bUE"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="VTR-OB-CQg"/>
+                        <constraint firstAttribute="width" constant="277" id="jDS-vr-Zz0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <state key="normal" title="Get All Capabillties">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="getSupportedCapabilitiesListButtonClick:" destination="-1" eventType="touchUpInside" id="JZp-af-6BX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VUc-tz-BxL">
+                    <rect key="frame" x="22" y="332" width="277" height="55"/>
+                    <color key="backgroundColor" red="0.23921568630000001" green="0.80784313730000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="VBL-t2-K7T"/>
+                        <constraint firstAttribute="height" constant="55" id="Zd2-r4-XNS"/>
+                        <constraint firstAttribute="width" constant="277" id="i10-Xm-wbT"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="n2W-Fk-UWY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <state key="normal" title="Add a Device">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="addDeviceButtonClick:" destination="-1" eventType="touchUpInside" id="Phf-3e-Bgq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="elq-0a-6jl">
+                    <rect key="frame" x="22" y="257" width="277" height="55"/>
+                    <color key="backgroundColor" red="0.23921568630000001" green="0.80784313730000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="LkR-bg-ifh"/>
+                        <constraint firstAttribute="width" constant="277" id="jmG-La-njq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <state key="normal" title="Get All Devices">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="getSupportedDevicesListButtonClick:" destination="-1" eventType="touchUpInside" id="p6U-GU-3Wy"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qEc-du-ZQl">
+                    <rect key="frame" x="22" y="182" width="277" height="55"/>
+                    <color key="backgroundColor" red="0.23921568630000001" green="0.80784313730000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="5f8-LQ-5pl"/>
+                        <constraint firstAttribute="width" constant="277" id="Bsc-qV-31D"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="DR6-me-lEh"/>
+                        <constraint firstAttribute="height" constant="55" id="WmE-cZ-Xke"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <state key="normal" title="Check User's Capabilites">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="hasCapabilitiButtonClick:" destination="-1" eventType="touchUpInside" id="X5l-oJ-feI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mng-Nk-kIC">
+                    <rect key="frame" x="8" y="38" width="38" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="mZO-Y2-07p"/>
+                        <constraint firstAttribute="width" constant="38" id="zo1-5n-OaE"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="ic_back_grey">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonClick:" destination="-1" eventType="touchUpInside" id="y9B-5m-bUH"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devices " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNb-EK-eF7">
+                    <rect key="frame" x="67" y="40" width="186" height="35"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                    <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="mng-Nk-kIC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="2Bz-tK-gcb"/>
+                <constraint firstItem="8AI-3M-Ntv" firstAttribute="top" secondItem="elq-0a-6jl" secondAttribute="bottom" constant="-205" id="3p6-J4-Odx"/>
+                <constraint firstItem="elq-0a-6jl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="257" id="58z-tg-gyf"/>
+                <constraint firstItem="elq-0a-6jl" firstAttribute="top" secondItem="DNb-EK-eF7" secondAttribute="bottom" constant="182" id="B3G-wf-Huu"/>
+                <constraint firstItem="VUc-tz-BxL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HCe-UT-7bc"/>
+                <constraint firstItem="DNb-EK-eF7" firstAttribute="top" secondItem="mng-Nk-kIC" secondAttribute="bottom" constant="-36" id="Mvg-VY-cM6"/>
+                <constraint firstItem="qEc-du-ZQl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UV2-ln-TOQ"/>
+                <constraint firstItem="mng-Nk-kIC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="38" id="V4k-fu-Hkw"/>
+                <constraint firstItem="qEc-du-ZQl" firstAttribute="top" secondItem="8AI-3M-Ntv" secondAttribute="bottom" constant="20" id="VoP-nB-KFr"/>
+                <constraint firstItem="VUc-tz-BxL" firstAttribute="top" secondItem="qEc-du-ZQl" secondAttribute="bottom" constant="95" id="WUV-XV-61Y"/>
+                <constraint firstItem="DNb-EK-eF7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="67" id="hti-cS-d3f"/>
+                <constraint firstItem="elq-0a-6jl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lxY-Bt-Tbs"/>
+                <constraint firstAttribute="trailing" secondItem="DNb-EK-eF7" secondAttribute="trailing" constant="67" id="oLx-2V-VdV"/>
+                <constraint firstItem="8AI-3M-Ntv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uUf-Rb-zCL"/>
+            </constraints>
+            <point key="canvasLocation" x="1101" y="571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back_grey" width="24" height="24"/>
+    </resources>
+</document>

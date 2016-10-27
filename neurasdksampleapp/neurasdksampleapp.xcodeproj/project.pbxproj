@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41FDB02A1D05C5EF001A50CB /* DeviceOperationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FDB0241D05C5EF001A50CB /* DeviceOperationsViewController.xib */; };
+		41FDB02B1D05C5EF001A50CB /* DeviceOperationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */; };
+		41FDB02C1D05C5EF001A50CB /* StringPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FDB0271D05C5EF001A50CB /* StringPicker.xib */; };
+		41FDB02D1D05C5F0001A50CB /* StringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0291D05C5EF001A50CB /* StringPicker.m */; };
+		6529B2A61BB04DC9008EC021 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6529B2A51BB04DC9008EC021 /* MainViewController.m */; };
+		65A64B9E1B8E13170090FAFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64B9D1B8E13170090FAFB /* main.m */; };
+		65A64BA11B8E13170090FAFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64BA01B8E13170090FAFB /* AppDelegate.m */; };
+		65A64BA91B8E13170090FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A64BA81B8E13170090FAFB /* Images.xcassets */; };
+		65A64BAC1B8E13170090FAFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A64BAA1B8E13170090FAFB /* LaunchScreen.xib */; };
+		65A64BB81B8E13170090FAFB /* NeuraSDKSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64BB71B8E13170090FAFB /* NeuraSDKSampleAppTests.m */; };
+		65AE5A471BA985A600824D2D /* SubscriptionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AE5A461BA985A600824D2D /* SubscriptionsListViewController.m */; };
+		65AE5A4C1BA9909400824D2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65AE5A4B1BA9909400824D2D /* Main.storyboard */; };
+		65AE5A501BA990C400824D2D /* SubscriptionsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AE5A4E1BA990C400824D2D /* SubscriptionsListTableViewCell.m */; };
+		65AE5A511BA990C400824D2D /* SubscriptionsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65AE5A4F1BA990C400824D2D /* SubscriptionsListTableViewCell.xib */; };
+		65C573B11BA561D9000AD514 /* PermissionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C573B01BA561D9000AD514 /* PermissionsListViewController.m */; };
+		B26755AE1D758D6F005E2FF2 /* UIView+AppAddon.m in Sources */ = {isa = PBXBuildFile; fileRef = B26755AC1D758D6F005E2FF2 /* UIView+AppAddon.m */; };
+		B2FB410C1DC1E79800C9128C /* NeuraSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */; };
+		B2FB410D1DC1E79800C9128C /* NeuraSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65A64BB21B8E13170090FAFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65A64B901B8E13170090FAFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65A64B971B8E13170090FAFB;
+			remoteInfo = NeuraSDKSampleApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2FB410E1DC1E79800C9128C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B2FB410D1DC1E79800C9128C /* NeuraSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		41FDB0241D05C5EF001A50CB /* DeviceOperationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceOperationsViewController.xib; sourceTree = "<group>"; };
+		41FDB0251D05C5EF001A50CB /* DeviceOperationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceOperationsViewController.h; sourceTree = "<group>"; };
+		41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceOperationsViewController.m; sourceTree = "<group>"; };
+		41FDB0271D05C5EF001A50CB /* StringPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StringPicker.xib; sourceTree = "<group>"; };
+		41FDB0281D05C5EF001A50CB /* StringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringPicker.h; sourceTree = "<group>"; };
+		41FDB0291D05C5EF001A50CB /* StringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringPicker.m; sourceTree = "<group>"; };
+		6529B2A41BB04DC9008EC021 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6529B2A51BB04DC9008EC021 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		65A64B981B8E13170090FAFB /* NeuraSDKSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeuraSDKSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65A64B9C1B8E13170090FAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A64B9D1B8E13170090FAFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65A64B9F1B8E13170090FAFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		65A64BA01B8E13170090FAFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		65A64BA81B8E13170090FAFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		65A64BAB1B8E13170090FAFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		65A64BB11B8E13170090FAFB /* NeuraSDKSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeuraSDKSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65A64BB61B8E13170090FAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A64BB71B8E13170090FAFB /* NeuraSDKSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeuraSDKSampleAppTests.m; sourceTree = "<group>"; };
+		65AE5A451BA985A600824D2D /* SubscriptionsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionsListViewController.h; sourceTree = "<group>"; };
+		65AE5A461BA985A600824D2D /* SubscriptionsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionsListViewController.m; sourceTree = "<group>"; };
+		65AE5A4B1BA9909400824D2D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		65AE5A4D1BA990C400824D2D /* SubscriptionsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionsListTableViewCell.h; sourceTree = "<group>"; };
+		65AE5A4E1BA990C400824D2D /* SubscriptionsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionsListTableViewCell.m; sourceTree = "<group>"; };
+		65AE5A4F1BA990C400824D2D /* SubscriptionsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionsListTableViewCell.xib; sourceTree = "<group>"; };
+		65C573AF1BA561D9000AD514 /* PermissionsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionsListViewController.h; sourceTree = "<group>"; };
+		65C573B01BA561D9000AD514 /* PermissionsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionsListViewController.m; sourceTree = "<group>"; };
+		B26755AC1D758D6F005E2FF2 /* UIView+AppAddon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+AppAddon.m"; path = "neurasdksampleapp/UIView+AppAddon.m"; sourceTree = SOURCE_ROOT; };
+		B26755AD1D758D6F005E2FF2 /* UIView+AppAddon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+AppAddon.h"; path = "neurasdksampleapp/UIView+AppAddon.h"; sourceTree = SOURCE_ROOT; };
+		B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NeuraSDK.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65A64B951B8E13170090FAFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FB410C1DC1E79800C9128C /* NeuraSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A64BAE1B8E13170090FAFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41FDB02E1D05C658001A50CB /* DeviceOperationsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				41FDB0241D05C5EF001A50CB /* DeviceOperationsViewController.xib */,
+				41FDB0251D05C5EF001A50CB /* DeviceOperationsViewController.h */,
+				41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */,
+				41FDB0271D05C5EF001A50CB /* StringPicker.xib */,
+				41FDB0281D05C5EF001A50CB /* StringPicker.h */,
+				41FDB0291D05C5EF001A50CB /* StringPicker.m */,
+			);
+			name = DeviceOperationsViewController;
+			sourceTree = "<group>";
+		};
+		657345A81C49176F0061844C /* Subscriptions List View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65AE5A451BA985A600824D2D /* SubscriptionsListViewController.h */,
+				65AE5A461BA985A600824D2D /* SubscriptionsListViewController.m */,
+			);
+			name = "Subscriptions List View Controller";
+			sourceTree = "<group>";
+		};
+		657345A91C49178C0061844C /* Permissions List View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65C573AF1BA561D9000AD514 /* PermissionsListViewController.h */,
+				65C573B01BA561D9000AD514 /* PermissionsListViewController.m */,
+			);
+			name = "Permissions List View Controller";
+			sourceTree = "<group>";
+		};
+		657345AA1C4917A70061844C /* Main View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6529B2A41BB04DC9008EC021 /* MainViewController.h */,
+				6529B2A51BB04DC9008EC021 /* MainViewController.m */,
+			);
+			name = "Main View Controller";
+			sourceTree = "<group>";
+		};
+		65A64B8F1B8E13170090FAFB = {
+			isa = PBXGroup;
+			children = (
+				B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */,
+				65A64B9A1B8E13170090FAFB /* NeuraSDKSampleApp */,
+				65A64BB41B8E13170090FAFB /* NeuraSDKSampleAppTests */,
+				65A64B991B8E13170090FAFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65A64B991B8E13170090FAFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65A64B981B8E13170090FAFB /* NeuraSDKSampleApp.app */,
+				65A64BB11B8E13170090FAFB /* NeuraSDKSampleAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65A64B9A1B8E13170090FAFB /* NeuraSDKSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				65AE5A4B1BA9909400824D2D /* Main.storyboard */,
+				65A64B9F1B8E13170090FAFB /* AppDelegate.h */,
+				65A64BA01B8E13170090FAFB /* AppDelegate.m */,
+				657345AA1C4917A70061844C /* Main View Controller */,
+				657345A91C49178C0061844C /* Permissions List View Controller */,
+				657345A81C49176F0061844C /* Subscriptions List View Controller */,
+				65AE5A521BA990DB00824D2D /* Table View Cell */,
+				41FDB02E1D05C658001A50CB /* DeviceOperationsViewController */,
+				65A64BA81B8E13170090FAFB /* Images.xcassets */,
+				65A64BAA1B8E13170090FAFB /* LaunchScreen.xib */,
+				65A64B9B1B8E13170090FAFB /* Supporting Files */,
+			);
+			path = NeuraSDKSampleApp;
+			sourceTree = "<group>";
+		};
+		65A64B9B1B8E13170090FAFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B26755AC1D758D6F005E2FF2 /* UIView+AppAddon.m */,
+				B26755AD1D758D6F005E2FF2 /* UIView+AppAddon.h */,
+				65A64B9C1B8E13170090FAFB /* Info.plist */,
+				65A64B9D1B8E13170090FAFB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65A64BB41B8E13170090FAFB /* NeuraSDKSampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				65A64BB71B8E13170090FAFB /* NeuraSDKSampleAppTests.m */,
+				65A64BB51B8E13170090FAFB /* Supporting Files */,
+			);
+			path = NeuraSDKSampleAppTests;
+			sourceTree = "<group>";
+		};
+		65A64BB51B8E13170090FAFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65A64BB61B8E13170090FAFB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65AE5A521BA990DB00824D2D /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				65AE5A4D1BA990C400824D2D /* SubscriptionsListTableViewCell.h */,
+				65AE5A4E1BA990C400824D2D /* SubscriptionsListTableViewCell.m */,
+				65AE5A4F1BA990C400824D2D /* SubscriptionsListTableViewCell.xib */,
+			);
+			name = "Table View Cell";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65A64B971B8E13170090FAFB /* NeuraSDKSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65A64BBB1B8E13170090FAFB /* Build configuration list for PBXNativeTarget "NeuraSDKSampleApp" */;
+			buildPhases = (
+				65A64B941B8E13170090FAFB /* Sources */,
+				65A64B951B8E13170090FAFB /* Frameworks */,
+				65A64B961B8E13170090FAFB /* Resources */,
+				B2FB410E1DC1E79800C9128C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeuraSDKSampleApp;
+			productName = NeuraSDKSampleApp;
+			productReference = 65A64B981B8E13170090FAFB /* NeuraSDKSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		65A64BB01B8E13170090FAFB /* NeuraSDKSampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65A64BBE1B8E13170090FAFB /* Build configuration list for PBXNativeTarget "NeuraSDKSampleAppTests" */;
+			buildPhases = (
+				65A64BAD1B8E13170090FAFB /* Sources */,
+				65A64BAE1B8E13170090FAFB /* Frameworks */,
+				65A64BAF1B8E13170090FAFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65A64BB31B8E13170090FAFB /* PBXTargetDependency */,
+			);
+			name = NeuraSDKSampleAppTests;
+			productName = NeuraSDKSampleAppTests;
+			productReference = 65A64BB11B8E13170090FAFB /* NeuraSDKSampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65A64B901B8E13170090FAFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Neura;
+				TargetAttributes = {
+					65A64B971B8E13170090FAFB = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = UF894MT86P;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
+					};
+					65A64BB01B8E13170090FAFB = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 65A64B971B8E13170090FAFB;
+					};
+				};
+			};
+			buildConfigurationList = 65A64B931B8E13170090FAFB /* Build configuration list for PBXProject "neurasdksampleapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65A64B8F1B8E13170090FAFB;
+			productRefGroup = 65A64B991B8E13170090FAFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65A64B971B8E13170090FAFB /* NeuraSDKSampleApp */,
+				65A64BB01B8E13170090FAFB /* NeuraSDKSampleAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65A64B961B8E13170090FAFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41FDB02C1D05C5EF001A50CB /* StringPicker.xib in Resources */,
+				65AE5A4C1BA9909400824D2D /* Main.storyboard in Resources */,
+				65A64BAC1B8E13170090FAFB /* LaunchScreen.xib in Resources */,
+				65AE5A511BA990C400824D2D /* SubscriptionsListTableViewCell.xib in Resources */,
+				65A64BA91B8E13170090FAFB /* Images.xcassets in Resources */,
+				41FDB02A1D05C5EF001A50CB /* DeviceOperationsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A64BAF1B8E13170090FAFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65A64B941B8E13170090FAFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41FDB02B1D05C5EF001A50CB /* DeviceOperationsViewController.m in Sources */,
+				65A64BA11B8E13170090FAFB /* AppDelegate.m in Sources */,
+				65C573B11BA561D9000AD514 /* PermissionsListViewController.m in Sources */,
+				6529B2A61BB04DC9008EC021 /* MainViewController.m in Sources */,
+				65A64B9E1B8E13170090FAFB /* main.m in Sources */,
+				B26755AE1D758D6F005E2FF2 /* UIView+AppAddon.m in Sources */,
+				65AE5A501BA990C400824D2D /* SubscriptionsListTableViewCell.m in Sources */,
+				41FDB02D1D05C5F0001A50CB /* StringPicker.m in Sources */,
+				65AE5A471BA985A600824D2D /* SubscriptionsListViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A64BAD1B8E13170090FAFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A64BB81B8E13170090FAFB /* NeuraSDKSampleAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65A64BB31B8E13170090FAFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65A64B971B8E13170090FAFB /* NeuraSDKSampleApp */;
+			targetProxy = 65A64BB21B8E13170090FAFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		65A64BAA1B8E13170090FAFB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65A64BAB1B8E13170090FAFB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65A64BB91B8E13170090FAFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		65A64BBA1B8E13170090FAFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65A64BBC1B8E13170090FAFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/NeuraSDKSampleApp",
+				);
+				INFOPLIST_FILE = NeuraSDKSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neura.sdk.sampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		65A64BBD1B8E13170090FAFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/NeuraSDKSampleApp",
+				);
+				INFOPLIST_FILE = NeuraSDKSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neura.sdk.sampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		65A64BBF1B8E13170090FAFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NeuraSDKSampleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeuraSDKSampleApp.app/NeuraSDKSampleApp";
+			};
+			name = Debug;
+		};
+		65A64BC01B8E13170090FAFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NeuraSDKSampleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeuraSDKSampleApp.app/NeuraSDKSampleApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65A64B931B8E13170090FAFB /* Build configuration list for PBXProject "neurasdksampleapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A64BB91B8E13170090FAFB /* Debug */,
+				65A64BBA1B8E13170090FAFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65A64BBB1B8E13170090FAFB /* Build configuration list for PBXNativeTarget "NeuraSDKSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A64BBC1B8E13170090FAFB /* Debug */,
+				65A64BBD1B8E13170090FAFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65A64BBE1B8E13170090FAFB /* Build configuration list for PBXNativeTarget "NeuraSDKSampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A64BBF1B8E13170090FAFB /* Debug */,
+				65A64BC01B8E13170090FAFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65A64B901B8E13170090FAFB /* Project object */;
+}
