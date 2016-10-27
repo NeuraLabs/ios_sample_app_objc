@@ -1,8 +1,8 @@
 # NeuraSampleIOS
 
-<img src="https://cloud.githubusercontent.com/assets/4048393/19759724/f48163f2-9c36-11e6-9ae0-3cd7f471968c.jpg" alt="permissions" width="210" height="350">
-<img src="https://cloud.githubusercontent.com/assets/4048393/19759726/f485b5a6-9c36-11e6-8be3-88ded2f0e1ea.png" alt="neura_login" width="210" height="350">
 <img src="https://cloud.githubusercontent.com/assets/4048393/19759725/f48361d4-9c36-11e6-9fdc-126c2de8e181.png" alt="missing_gym" width="210" height="350">
+<img src="https://cloud.githubusercontent.com/assets/4048393/19759726/f485b5a6-9c36-11e6-8be3-88ded2f0e1ea.png" alt="neura_login" width="210" height="350">
+<img src="https://cloud.githubusercontent.com/assets/4048393/19759724/f48163f2-9c36-11e6-9ae0-3cd7f471968c.jpg" alt="permissions" width="210" height="350">
 
 ##Introduction
 This is a sample code for integrating <a href="http://www.theneura.com/">Neura</a> with a native IOS application.<br/>
