@@ -39,7 +39,7 @@ In this sample application, once the subscriptions is enabled, you'll be notifie
 
 ##Testing while developing
 You can be simulate events from <a href="https://dev.theneura.com/console/">Applications console</a>, make sure you are connected to Neura in your mobile phone with the same account you opened your app <br/>
-<img src="https://cloud.githubusercontent.com/assets/4048393/19761200/9adb03e2-9c3d-11e6-8cca-d08dca7e6a9b.png" alt="subscriptions" width="210" height="350">
+<img src="https://cloud.githubusercontent.com/assets/4048393/19761200/9adb03e2-9c3d-11e6-8cca-d08dca7e6a9b.png" alt="subscriptions" width="246">
 
 ##Support
 1. Go to <a href="https://dev.theneura.com/docs/getstarted">getting started with Neura</a> for more details.
