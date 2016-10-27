@@ -35,7 +35,7 @@ If you wish to take this sample application, and integrate your own application,
 ##Subscribe to events
 If you wish to be notified from Neura when an event occurs, you need to <a href="https://dev.theneura.com/docs/guide/ios/setup/">subscribe to event</a>.<br/>
 In this sample application, once the subscriptions is enabled, you'll be notified of the event. For example, in this screenshot, you'll be notified for the event 'UserWokeUp', but not for 'UserStartedWorkOut'.
-<br/><img src="https://s13.postimg.org/gkqe3jzt3/subscriptions.png" alt="subscriptions" width="210" height="350">
+<br/><img src="https://cloud.githubusercontent.com/assets/4048393/19760715/93b610fe-9c3b-11e6-8469-d961170c92ab.jpg" alt="subscriptions" width="210" height="350">
 
 ##Testing while developing
 TBD
