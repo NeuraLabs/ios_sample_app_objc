@@ -146,7 +146,7 @@
 
 - (void)subscribeToEvent:(NSString *)eventName {
     [self showActivityIndicator:YES];
-    [[NeuraSDK sharedInstance]subscribeToEvent:eventName identifier:[NSString stringWithFormat:@"_%@",eventName] webHookID:nil state:[NSString stringWithFormat:@"state_%@",eventName] completion:^(NSDictionary *responseData, NSString *error) {
+    [[NeuraSDK sharedInstance]subscribeToEvent:eventName identifier:[NSString stringWithFormat:@"_%@",eventName] webHookID:nil completion:^(NSDictionary *responseData, NSString *error) {
         [self showActivityIndicator:NO];
         NSLog(@" subscribeToEvent = responseData:%@  error:%@",responseData,error);
         [self reloadAllData];
