@@ -67,7 +67,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SubscriptionsListTableViewCell *cell = [self.subscriptionsTableView dequeueReusableCellWithIdentifier:@"Cell"];
     NSDictionary *permissionDictionary = [self.permissionsArray objectAtIndex:indexPath.row];
-    cell.titleLabel.text = permissionDictionary[@"displayName"];
+    NSDictionary *eventsDictionary = [permissionDictionary[@"events"] firstObject];
+    
+    cell.titleLabel.text = eventsDictionary[@"displayName"];
     [cell.switchButton addTarget:self action:@selector(subscribeToEventSwitch:) forControlEvents:UIControlEventValueChanged];
     cell.switchButton.on = NO;
     if (self.subscriptionsArray) {
@@ -89,6 +91,7 @@
     SubscriptionsListTableViewCell *cell = (SubscriptionsListTableViewCell*)subscribeSwitch.superview.superview;
     NSIndexPath *indexPath = [self.subscriptionsTableView indexPathForCell:cell];
     __block NSDictionary *permissionDictionary = [self.permissionsArray objectAtIndex:indexPath.row];
+    __block NSDictionary *eventsDictionary = [permissionDictionary[@"events"] firstObject];
     
     if (subscribeSwitch.isOn) {
         
@@ -116,7 +119,7 @@
             [self presentViewController:alert animated:YES completion:nil];
             
         } else {
-            [self subscribeToEvent:permissionDictionary[@"name"]];
+            [self subscribeToEvent:eventsDictionary[@"name"]];
         }
     } else{
         [self removeSubscriptionWithIdentifier:[NSString stringWithFormat:@"_%@",permissionDictionary[@"name"]]];
@@ -172,7 +175,7 @@
 
 
 - (void)showActivityIndicator:(BOOL)show {
-
+    
     if (show) {
         [self.view addDarkLayerWithAlpha:0.8];
     } else {
