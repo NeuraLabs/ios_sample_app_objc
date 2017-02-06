@@ -16,7 +16,6 @@
 		65A64BA11B8E13170090FAFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64BA01B8E13170090FAFB /* AppDelegate.m */; };
 		65A64BA91B8E13170090FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A64BA81B8E13170090FAFB /* Images.xcassets */; };
 		65A64BAC1B8E13170090FAFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A64BAA1B8E13170090FAFB /* LaunchScreen.xib */; };
-		65A64BB81B8E13170090FAFB /* NeuraSDKSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64BB71B8E13170090FAFB /* NeuraSDKSampleAppTests.m */; };
 		65AE5A471BA985A600824D2D /* SubscriptionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AE5A461BA985A600824D2D /* SubscriptionsListViewController.m */; };
 		65AE5A4C1BA9909400824D2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65AE5A4B1BA9909400824D2D /* Main.storyboard */; };
 		65AE5A501BA990C400824D2D /* SubscriptionsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AE5A4E1BA990C400824D2D /* SubscriptionsListTableViewCell.m */; };
@@ -26,16 +25,6 @@
 		B2FB410C1DC1E79800C9128C /* NeuraSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */; };
 		B2FB410D1DC1E79800C9128C /* NeuraSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		65A64BB21B8E13170090FAFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 65A64B901B8E13170090FAFB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 65A64B971B8E13170090FAFB;
-			remoteInfo = NeuraSDKSampleApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B2FB410E1DC1E79800C9128C /* Embed Frameworks */ = {
@@ -67,7 +56,6 @@
 		65A64BA01B8E13170090FAFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		65A64BA81B8E13170090FAFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		65A64BAB1B8E13170090FAFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		65A64BB11B8E13170090FAFB /* NeuraSDKSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeuraSDKSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A64BB61B8E13170090FAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A64BB71B8E13170090FAFB /* NeuraSDKSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeuraSDKSampleAppTests.m; sourceTree = "<group>"; };
 		65AE5A451BA985A600824D2D /* SubscriptionsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionsListViewController.h; sourceTree = "<group>"; };
@@ -89,13 +77,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2FB410C1DC1E79800C9128C /* NeuraSDK.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65A64BAE1B8E13170090FAFB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				65A64B981B8E13170090FAFB /* NeuraSDKSampleApp.app */,
-				65A64BB11B8E13170090FAFB /* NeuraSDKSampleAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,24 +218,6 @@
 			productReference = 65A64B981B8E13170090FAFB /* NeuraSDKSampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		65A64BB01B8E13170090FAFB /* NeuraSDKSampleAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 65A64BBE1B8E13170090FAFB /* Build configuration list for PBXNativeTarget "NeuraSDKSampleAppTests" */;
-			buildPhases = (
-				65A64BAD1B8E13170090FAFB /* Sources */,
-				65A64BAE1B8E13170090FAFB /* Frameworks */,
-				65A64BAF1B8E13170090FAFB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				65A64BB31B8E13170090FAFB /* PBXTargetDependency */,
-			);
-			name = NeuraSDKSampleAppTests;
-			productName = NeuraSDKSampleAppTests;
-			productReference = 65A64BB11B8E13170090FAFB /* NeuraSDKSampleAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -280,10 +242,6 @@
 							};
 						};
 					};
-					65A64BB01B8E13170090FAFB = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 65A64B971B8E13170090FAFB;
-					};
 				};
 			};
 			buildConfigurationList = 65A64B931B8E13170090FAFB /* Build configuration list for PBXProject "neurasdksampleapp" */;
@@ -300,7 +258,6 @@
 			projectRoot = "";
 			targets = (
 				65A64B971B8E13170090FAFB /* NeuraSDKSampleApp */,
-				65A64BB01B8E13170090FAFB /* NeuraSDKSampleAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,13 +273,6 @@
 				65AE5A511BA990C400824D2D /* SubscriptionsListTableViewCell.xib in Resources */,
 				65A64BA91B8E13170090FAFB /* Images.xcassets in Resources */,
 				41FDB02A1D05C5EF001A50CB /* DeviceOperationsViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65A64BAF1B8E13170090FAFB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,23 +295,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65A64BAD1B8E13170090FAFB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65A64BB81B8E13170090FAFB /* NeuraSDKSampleAppTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		65A64BB31B8E13170090FAFB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 65A64B971B8E13170090FAFB /* NeuraSDKSampleApp */;
-			targetProxy = 65A64BB21B8E13170090FAFB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		65A64BAA1B8E13170090FAFB /* LaunchScreen.xib */ = {
@@ -512,42 +446,6 @@
 			};
 			name = Release;
 		};
-		65A64BBF1B8E13170090FAFB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NeuraSDKSampleAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeuraSDKSampleApp.app/NeuraSDKSampleApp";
-			};
-			name = Debug;
-		};
-		65A64BC01B8E13170090FAFB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NeuraSDKSampleAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeuraSDKSampleApp.app/NeuraSDKSampleApp";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -565,15 +463,6 @@
 			buildConfigurations = (
 				65A64BBC1B8E13170090FAFB /* Debug */,
 				65A64BBD1B8E13170090FAFB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		65A64BBE1B8E13170090FAFB /* Build configuration list for PBXNativeTarget "NeuraSDKSampleAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				65A64BBF1B8E13170090FAFB /* Debug */,
-				65A64BC01B8E13170090FAFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
