@@ -11,8 +11,6 @@
 #import "DeviceOperationsViewController.h"
 #import "UIView+AppAddon.h"
 
-#define kIsUserLogin @"Is_user_login"
-
 @interface MainViewController ()
 
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
@@ -59,10 +57,10 @@
     self.permissionsListButton.layer.borderColor = [UIColor colorWithRed:0.2102 green:0.7655 blue:0.9545 alpha:1.0].CGColor;
     self.permissionsListButton.layer.borderWidth = 1;
     
-    if ([[NSUserDefaults standardUserDefaults]boolForKey:kIsUserLogin]) {
+    if (NeuraSDK.shared.isAuthenticated) {
         [self neuraConnectSymbolAnimate];
     }
-    self.sdkVersionLabel.text = [NSString stringWithFormat:@"SDK version: %@", [[NeuraSDK sharedInstance] getVersion]];
+    self.sdkVersionLabel.text = [NSString stringWithFormat:@"SDK version: %@", [NeuraSDK.shared getVersion]];
     NSString *appVer = [NSString stringWithFormat:@"%@.%@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"],
                         [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
     self.appVersionLabel.text = appVer;
@@ -127,12 +125,6 @@
     }
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Neura Symbol Animation
 - (void)neuraConnectSymbolAnimate{
     [UIView animateWithDuration:1 animations:^{
@@ -145,9 +137,9 @@
         self.neuraStatusLabel.textColor = [UIColor greenColor];
         [self.loginButton setTitle:@"Disconnect" forState:UIControlStateNormal];
         [self.permissionsListButton setTitle:@"Edit Subscriptions" forState:UIControlStateNormal];
+        [self updateButtonsState];
     }];
 }
-
 
 - (void)neuraDisconnecSymbolAnimate{
     [UIView animateWithDuration:1 animations:^{
@@ -159,140 +151,88 @@
         self.neuraStatusLabel.text = @"Disconnected";
         self.neuraStatusLabel.textColor = [UIColor redColor];
         [self.loginButton setTitle:@"Connect and Request Permissions" forState:UIControlStateNormal];
-        [self.permissionsListButton setTitle:@"Permissions List" forState:UIControlStateNormal];
+        [self updateButtonsState];
     }];
 }
+
+#pragma mark - Buttons state
+-(void)updateButtonsState {
+    if (NeuraSDK.shared.isAuthenticated) {
+        [self.permissionsListButton setTitle:@"Edit Subscriptions" forState:UIControlStateNormal];
+    } else {
+        [self.permissionsListButton setTitle:@"Permissions List" forState:UIControlStateNormal];
+    }
+}
+
 #pragma mark - login To Neura
 - (void)loginToNeura {
-    
     [self.view addDarkLayerWithAlpha:0.5];
-    [[NeuraSDK sharedInstance] getAppPermissionsWithHandler:^(NSArray *permissionsArray, NSString *error) {
-        
-        NSMutableArray *permissions = nil;
-        if (!error) {
-            permissions = [NSMutableArray new];
-            for (NSDictionary* dict in permissionsArray) {
-                NSString *event = [dict objectForKey:@"name"];
-                if(event) {
-                    [permissions addObject:event];
-                }
-            }
-        } else {
-            permissions = [NSMutableArray arrayWithObjects:@"userStartedDriving",
-                            @"userArrivedToWork",
-                            @"userLeftHome",
-                            @"userStartedRunning",
-                            @"userArrivedHome",
-                            @"userStartedWorkOut",
-                            @"activitySummaryPerPlace",
-                            @"wellnessProfile",
-                            @"dailyActivitySummary",
-                            @"getPersonNodesSemantics",
-                            @"userArrivedWorkFromHome",
-                            @"getLocationNodesSemantics",
-                            @"sleepData",
-                            @"getDeviceNodesSemantics",
-                            @"userSituation",
-                            @"userFinishedDriving",
-                            @"userFinishedRunning",
-                            @"userStartedWalking",
-                            @"userFinishedWalking",
-                            @"userIsOnTheWayToWork",
-                            @"userIsOnTheWayToActiveZone",
-                            @"userIsOnTheWayHome", 
-                            @"userGotUp", 
-                            @"userStartedSleeping", 
-                            @"userFinishedWorkOut", 
-                            @"userLeftWork", 
-                            @"userLeftActiveZone", 
-                            @"userArrivedHomeFromWork", 
-                            @"userArrivedAtGroceryStore", 
-                            @"userArrivedAtSchoolCampus", 
-                            @"userArrivedAtAirport", 
-                            @"userArrivedAtHospital", 
-                            @"userArrivedAtClinic", 
-                            @"userArrivedAtRestaurant", 
-                            @"userArrivedAtCafe",
-                            @"userArrivedAtPharmacy", 
-                            @"userArrivedAtActiveZone", 
-                            @"userArrivedToGym", 
-                            @"userLeftAirport", 
-                            @"userLeftCafe", 
-                            @"userLeftHospital", 
-                            @"userLeftRestaurant",
-                            @"userLeftSchoolCampus", 
-                            @"userLeftGym", nil];
-        }
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.view addDarkLayerWithAlpha:0.0];
-        });
-        
-        [[NeuraSDK sharedInstance] authenticateWithPermissions:permissions
-                                                  onController:self
-                                                   withHandler:^(NSString *token, NSString *error) {
-                                                       if (token) {
-                                                           NSLog(@"token = %@ ", token);
-                                                           [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kIsUserLogin];
-                                                           [[NSUserDefaults standardUserDefaults] synchronize];
-                                                           [self neuraConnectSymbolAnimate];
-                                                       }  else {
-                                                           NSLog(@"login error = %@", error);
-                                                       }
-                                                   }];
-    }];
-    
+
+    NeuraAuthenticationRequest *authenticationRequest = [[NeuraAuthenticationRequest alloc] initWithController:self];
+    [NeuraSDK.shared authenticateWithRequest:authenticationRequest
+                                    callback:^(NeuraAuthenticationResult * _Nonnull result) {
+                                        
+                                        // Check for failure
+                                        if (result.success) {
+                                            // Authentication successfull.
+                                            NSLog(@"token = %@ ", result.token);
+                                            [self neuraConnectSymbolAnimate];
+                                        } else {
+                                            NSLog(@"login error = %@", result.error);
+                                        }
+                                        
+                                        dispatch_async(dispatch_get_main_queue(), ^{
+                                            [self.view addDarkLayerWithAlpha:0.0];
+                                        });
+
+                                    }];
 }
 
 
 #pragma mark - logout Frome Neura
 - (void)logoutFromeNeura {
-    [[NeuraSDK sharedInstance] logout];
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kIsUserLogin];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [self neuraDisconnecSymbolAnimate];
+    [NeuraSDK.shared logoutWithCallback:^(NeuraLogoutResult * _Nonnull result) {
+        [self neuraDisconnecSymbolAnimate];
+    }];
+}
+
+#pragma mark - User alerts
+- (void)showUserNotLoggedInAlert {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"The user is not logged in"
+                                                    message:nil
+                                                   delegate:self
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 
 #pragma mark - User action
 - (IBAction)openNeuraSettingsPanelButtonClick:(id)sender {
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:kIsUserLogin]) {
-        [[NeuraSDK sharedInstance] openNeuraSettingsPanel];
+    if (NeuraSDK.shared.isAuthenticated) {
+        [NeuraSDK.shared openNeuraSettingsPanel];
     } else {
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"The user is not logged in"
-                                                        message:nil
-                                                       delegate:self
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil, nil];
-        [alert show];
+        [self showUserNotLoggedInAlert];
     }
 }
 
-
 - (IBAction)DeviceOperationsButtonClick:(id)sender {
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:kIsUserLogin]) {
+
+    if (NeuraSDK.shared.isAuthenticated) {
         
         DeviceOperationsViewController *deviceOperationsViewController = [[DeviceOperationsViewController alloc] initWithNibName:@"DeviceOperationsViewController" bundle:nil];
         [self presentViewController:deviceOperationsViewController animated:YES completion:nil];
         
     } else {
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"The user is not logged in"
-                                                        message:nil
-                                                       delegate:self
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil, nil];
-        [alert show];
+
+        [self showUserNotLoggedInAlert];
+
     }
 }
 
 
 - (IBAction)loginButtonPressed:(id)sender {
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:kIsUserLogin]) {
+    if (NeuraSDK.shared.isAuthenticated) {
         [self logoutFromeNeura];
     } else {
         [self loginToNeura];
@@ -301,10 +241,10 @@
 
 
 - (IBAction)permissionsListPressed:(id)sender {
-    if ([self.permissionsListButton.titleLabel.text isEqualToString:@"Permissions List"]) {
-        [self performSegueWithIdentifier:@"permissionsList" sender:self];
-    } else {
+    if (NeuraSDK.shared.isAuthenticated) {
         [self performSegueWithIdentifier:@"SubscriptionsList" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"permissionsList" sender:self];
     }
 }
 

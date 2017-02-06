@@ -31,6 +31,12 @@
     [self setButtonsRoundCorners];
 }
 
+#pragma mark - Alerts
+- (void)showAlertMessage:(NSString *)message title:(NSString *)title {
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alertVC animated:YES completion:nil];
+}
 
 #pragma mark - User action
 - (IBAction)getSupportedDevicesListButtonClick:(id)sender {
@@ -47,15 +53,13 @@
     
     self.selectedName = @"";
     self.selectedCapabiliti = @"";
-    NSArray *list = @[@"All", @"Name", @"Capability" ];
+    NSArray *list = @[@"Name", @"Capability" ];
     
     [StringPicker showPickerWithTitle:@"Add Device by..." buttons:2 rows:list WithHandler:^(NSInteger selectedIndex, NSString *selectedValue) {
         
         if (selectedIndex == 0) {
-            [self addDeviceWithCapability:nil orDeviceName:nil];
-        } else if (selectedIndex == 1) {
             [self getSupportedDevicesList:sender addMode:YES];
-        } else if (selectedIndex == 2) {
+        } else if (selectedIndex == 1) {
             [self getSupportedCapabilities:sender addMode:YES];
         }
     }];
@@ -64,26 +68,22 @@
 
 - (IBAction)hasCapabilitiButtonClick:(id)sender {
     [self.view addDarkLayerWithAlpha:0.5];
-    [[NeuraSDK sharedInstance] getSupportedCapabilitiesListWithHandler:^(NSDictionary *responseData, NSString *error) {
+    
+    [NeuraSDK.shared getSupportedCapabilitiesListWithCallback:^(NeuraSupportedCapabilitiesListResult * _Nonnull result) {
         [self.view addDarkLayerWithAlpha:0];
-        if (responseData) {
-            NSArray *list = [responseData[@"items"] valueForKey:@"name"];
-            
-            [StringPicker showPickerWithTitle:@"Select capability" buttons:2 rows:list WithHandler:^(NSInteger selectedIndex, NSString *selectedValue) {
-                [self.view addDarkLayerWithAlpha:0.5];
-                [[NeuraSDK sharedInstance]
-                 hasDeviceWithCapability:selectedValue
-                 withHandler:^(NSDictionary *responseData, NSString *error) {
-                     [self.view addDarkLayerWithAlpha:0];
-                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:responseData[@"status"]
-                                                                     message:nil
-                                                                    delegate:self
-                                                           cancelButtonTitle:@"Ok"
-                                                           otherButtonTitles:nil, nil];
-                     [alert show];
-                 }];
-            }];
-        }}];
+        if (!result.success) return;
+        
+        NSArray *list = [result.capabilities valueForKey:@"displayName"];
+        [StringPicker showPickerWithTitle:@"Select capability" buttons:2 rows:list WithHandler:^(NSInteger selectedIndex, NSString *selectedValue) {
+            [self.view addDarkLayerWithAlpha:0.5];
+            NCapability *selectedCapability = result.capabilities[selectedIndex];
+            [NeuraSDK.shared hasDeviceWithCapability:selectedCapability
+                                        withCallback:^(NeuraHasDeviceWithCapabilityResult * _Nonnull result) {
+                                            [self.view addDarkLayerWithAlpha:0];
+                                            [self showAlertMessage:nil title:result.hasDevice ? @"YES" : @"NO"];
+                                        }];
+        }];
+    }];
 }
 
 
@@ -93,56 +93,58 @@
 
 
 - (void)addDeviceWithCapability:(NSString *)capability orDeviceName:(NSString *)deviceName {
-    [[NeuraSDK sharedInstance] addDeviceWithCapability:capability
-                                          deviceName:deviceName
-                                           withHandler:^(NSDictionary *responseData, NSString *error) {
-        
-                                               NSLog(@"responseData:%@ \n error:%@", responseData, error);
-                                               
-                                               if (error) {
-                                                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
-                                                                                                   message:error
-                                                                                                  delegate:self
-                                                                                         cancelButtonTitle:@"Ok"
-                                                                                         otherButtonTitles:nil, nil];
-                                                   [alert show];
-                                               }
-                                           }];
+    if (capability) {
+        [NeuraSDK.shared addDeviceWithCapabilityNamed:capability withCallback:^(NeuraAddDeviceResult * _Nonnull result) {
+            NSString *message = result.errorString;
+            NSString *title = result.success ? @"Success" : @"Failed";
+            [self showAlertMessage:message title:title];
+        }];
+    } else if (deviceName) {
+        [NeuraSDK.shared addDeviceNamed:deviceName withCallback:^(NeuraAddDeviceResult * _Nonnull result) {
+            NSString *message = result.errorString;
+            NSString *title = result.success ? @"Success" : @"Failed";
+            [self showAlertMessage:message title:title];
+        }];
+    } else {
+        NSLog(@"Can't add device. No capability name or device name provided.");
+    }
 }
 
 
 - (void)getSupportedCapabilities:(id)sender addMode:(BOOL)add {
     [self.view addDarkLayerWithAlpha:0.5];
-    [[NeuraSDK sharedInstance] getSupportedCapabilitiesListWithHandler:^(NSDictionary *responseData, NSString *error) {
+    
+    [NeuraSDK.shared getSupportedCapabilitiesListWithCallback:^(NeuraSupportedCapabilitiesListResult * _Nonnull result) {
         [self.view addDarkLayerWithAlpha:0];
-        if (responseData) {
-            NSArray *list = [responseData[@"items"] valueForKey:@"name"];
-            int button = add? 2 : 1;
-            [StringPicker showPickerWithTitle:@"Capabilities List" buttons:button rows:list WithHandler:^(NSInteger selectedIndex, NSString *selectedValue) {
-                if (selectedValue && add) {
-                    [self addDeviceWithCapability:selectedValue orDeviceName:nil];
-                }
-            }];
-        }
+        if (!result.success) return;
+        NSArray *list = [result.capabilities valueForKey:@"displayName"];
+        int button = add? 2 : 1;
+        [StringPicker showPickerWithTitle:@"Capabilities List" buttons:button rows:list WithHandler:^(NSInteger selectedIndex, NSString *selectedValue) {
+            if (selectedValue && add) {
+                NCapability *capability = result.capabilities[selectedIndex];
+                [self addDeviceWithCapability:capability.name orDeviceName:nil];
+            }
+        }];
     }];
 }
 
 
 - (void)getSupportedDevicesList:(id)sender addMode:(BOOL)add {
     [self.view addDarkLayerWithAlpha:0.5];
-    [[NeuraSDK sharedInstance] getSupportedDevicesListWithHandler:^(NSDictionary *responseData, NSString *error) {
+    
+    [NeuraSDK.shared getSupportedDevicesListWithCallback:^(NeuraSupportedDevicesListResult * _Nonnull result) {
         [self.view addDarkLayerWithAlpha:0];
-        if (responseData) {
-            NSArray *list = [responseData[@"devices"] valueForKey:@"name"];
-            if(list && list.count > 0) {
-                int button = add? 2 : 1;
-                [StringPicker showPickerWithTitle:@"Devices List" buttons:button rows:list WithHandler:^(NSInteger selectedIndex, NSString *selectedValue) {
-                    if (selectedValue && add) {
-                        [self addDeviceWithCapability:nil orDeviceName:selectedValue];
-                    }
-                }];
-            }
-        }}];
+        if (!result.success && result.devices.count > 0) return;
+        NSArray *list = [result.devices valueForKey:@"name"];
+        [StringPicker showPickerWithTitle:@"Devices List" buttons:add? 2:1
+                                     rows:list
+                              WithHandler:^(NSInteger selectedIndex, NSString *selectedValue) {
+                                  if (!add || selectedValue == nil) return;
+                                  
+                                  NDevice *device = result.devices[selectedIndex];
+                                  [self addDeviceWithCapability:nil orDeviceName:device.name];
+                              }];
+    }];
 }
 
 - (void)setButtonsRoundCorners {

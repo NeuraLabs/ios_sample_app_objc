@@ -12,7 +12,7 @@
 @interface PermissionsListViewController ()
 
 @property (strong, nonatomic) IBOutlet UITableView *permissionsTableView;
-@property (strong, nonatomic) NSArray *permissionsArray;
+@property (strong, nonatomic) NSArray<NPermission *> *permissionsArray;
 - (IBAction)backButtonPressed:(id)sender;
 @end
 
@@ -21,22 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [[NeuraSDK sharedInstance] getAppPermissionsWithHandler:^(NSArray *permissionsArray, NSString *error) {
-        if (!error) {
-            self.permissionsArray = permissionsArray;
+    [NeuraSDK.shared getAppPermissionsListWithCallback:^(NeuraPermissionsListResult *result) {
+        if (result.success) {
+            self.permissionsArray = result.permissions;
             [self.permissionsTableView reloadData];
         }
     }];
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -50,8 +41,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     cell.backgroundColor = [UIColor clearColor];
-    NSDictionary *permissionDictionary = [self.permissionsArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = permissionDictionary[@"displayName"];
+    
+    NPermission *permission = self.permissionsArray[indexPath.item];
+    cell.textLabel.text = permission.displayName;
+
     return cell;
 }
 
