@@ -180,10 +180,22 @@
     [self showActivityIndicator:YES];
     
     // Init a new subscription.
-    NSubscription *newSubscription = [NSubscription subscriptionWithEventNamed:eventName];
+    NSString *webHookId = @"myWebHookIdObjC"; // <== You will need to change this id to the one you defined on the dev site.
+    NSubscription *newSubscription = [[NSubscription alloc] initWithEventName:eventName webhookId:webHookId];
     
     // Add the new subscription.
     [NeuraSDK.shared addSubscription:newSubscription callback:^(NeuraAddSubscriptionResult * _Nonnull result) {
+        
+        if (result.error != nil) {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                                     message:[result.error localizedDescription]
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:okAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+        
         [self showActivityIndicator:NO];
         NSLog(@"subscribeToEvent = success:%@ error:%@", @(result.success), result.error);
         [self reloadAllData];

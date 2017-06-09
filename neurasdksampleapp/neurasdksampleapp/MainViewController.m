@@ -38,21 +38,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"Push token: %@",[NeuraSDKPushNotification getDeviceToken]);
-    
-    // Do any additional setup after loading the view.
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(neuraSDKDidReceiveRemoteNotification:)
-                                                 name:NeuraSDKDidReceiveRemoteNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(neuraSDKErrorNotificationDidReceive:)
-                                                 name:NeuraSDKErrorDidReceiveNotification
-                                               object:nil];
-    
-
     [self setButtonsRoundCorners];
     self.permissionsListButton.layer.borderColor = [UIColor colorWithRed:0.2102 green:0.7655 blue:0.9545 alpha:1.0].CGColor;
     self.permissionsListButton.layer.borderWidth = 1;
