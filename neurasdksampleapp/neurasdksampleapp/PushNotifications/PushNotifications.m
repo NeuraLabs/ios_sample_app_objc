@@ -25,6 +25,7 @@
 
 + (void)registerDeviceToken:(NSData *)deviceToken {
     [[NSUserDefaults standardUserDefaults] setObject:deviceToken forKey:kStoredDeviceToken];
+    [NeuraSDKPushNotification registerDeviceToken:deviceToken];
 }
 
 + (NSData *)storedDeviceToken {
