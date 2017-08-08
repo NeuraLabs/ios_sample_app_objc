@@ -2,7 +2,7 @@
 //  PushNotifications.m
 //  neurasdksampleapp
 //
-//  Created by Aviv Wolf on 08/08/2017.
+//  Created by Neura on 08/08/2017.
 //  Copyright © 2017 Neura. All rights reserved.
 //
 #import "PushNotifications.h"
