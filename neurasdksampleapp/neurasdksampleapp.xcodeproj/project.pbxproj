@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0877CEB01F39AB790020B59E /* PushNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 0877CEAF1F39AB790020B59E /* PushNotifications.m */; };
 		41FDB02A1D05C5EF001A50CB /* DeviceOperationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FDB0241D05C5EF001A50CB /* DeviceOperationsViewController.xib */; };
 		41FDB02B1D05C5EF001A50CB /* DeviceOperationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */; };
 		41FDB02C1D05C5EF001A50CB /* StringPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FDB0271D05C5EF001A50CB /* StringPicker.xib */; };
@@ -41,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0877CEAE1F39AB790020B59E /* PushNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotifications.h; sourceTree = "<group>"; };
+		0877CEAF1F39AB790020B59E /* PushNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotifications.m; sourceTree = "<group>"; };
 		41FDB0241D05C5EF001A50CB /* DeviceOperationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceOperationsViewController.xib; sourceTree = "<group>"; };
 		41FDB0251D05C5EF001A50CB /* DeviceOperationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceOperationsViewController.h; sourceTree = "<group>"; };
 		41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceOperationsViewController.m; sourceTree = "<group>"; };
@@ -83,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0877CEAD1F39AB640020B59E /* PushNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				0877CEAE1F39AB790020B59E /* PushNotifications.h */,
+				0877CEAF1F39AB790020B59E /* PushNotifications.m */,
+			);
+			name = PushNotifications;
+			path = neurasdksampleapp/PushNotifications;
+			sourceTree = SOURCE_ROOT;
+		};
 		41FDB02E1D05C658001A50CB /* DeviceOperationsViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +161,7 @@
 				65A64B9F1B8E13170090FAFB /* AppDelegate.h */,
 				65A64BA01B8E13170090FAFB /* AppDelegate.m */,
 				657345AA1C4917A70061844C /* Main View Controller */,
+				0877CEAD1F39AB640020B59E /* PushNotifications */,
 				657345A91C49178C0061844C /* Permissions List View Controller */,
 				657345A81C49176F0061844C /* Subscriptions List View Controller */,
 				65AE5A521BA990DB00824D2D /* Table View Cell */,
@@ -283,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0877CEB01F39AB790020B59E /* PushNotifications.m in Sources */,
 				41FDB02B1D05C5EF001A50CB /* DeviceOperationsViewController.m in Sources */,
 				65A64BA11B8E13170090FAFB /* AppDelegate.m in Sources */,
 				65C573B11BA561D9000AD514 /* PermissionsListViewController.m in Sources */,
