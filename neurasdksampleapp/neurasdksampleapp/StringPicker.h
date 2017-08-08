@@ -2,7 +2,7 @@
 //  StringPicker.h
 //  NeuraSDKSampleApp
 //
-//  Created by Gal Mirkin on 02/06/2016.
+//  Created by Neura on 02/06/2016.
 //  Copyright © 2016 Neura. All rights reserved.
 //
 
