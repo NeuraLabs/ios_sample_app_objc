@@ -180,8 +180,8 @@
     [self showActivityIndicator:YES];
     
     // Init a new subscription.
-    NSString *webHookId = @"myWebHookIdObjC"; // <== You will need to change this id to the one you defined on the dev site.
-    NSubscription *newSubscription = [[NSubscription alloc] initWithEventName:eventName webhookId:webHookId];
+    NSString *identifier = [NSString stringWithFormat:@"%@_%@", NeuraSDK.shared.neuraUserId, eventName];
+    NSubscription *newSubscription = [[NSubscription alloc] initWithEvenName:eventName forPushWithIdentifier:identifier];
     
     // Add the new subscription.
     [NeuraSDK.shared addSubscription:newSubscription callback:^(NeuraAddSubscriptionResult * _Nonnull result) {

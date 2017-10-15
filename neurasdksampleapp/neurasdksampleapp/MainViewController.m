@@ -99,6 +99,7 @@
     }
     self.neuraStatusLabel.text = text;
     self.neuraStatusLabel.textColor = color;
+    [self updateButtonsState];
 }
 
 #pragma mark - Authentication
@@ -116,7 +117,8 @@
     }
     
     [self.view addDarkLayerWithAlpha:0.5];
-    NeuraAnonymousAuthenticationRequest *request = [[NeuraAnonymousAuthenticationRequest alloc] initWithDeviceToken:deviceToken];
+    //NeuraAnonymousAuthenticationRequest *request = [NeuraAnonymousAuthenticationRequest new];
+    NeuraAuthenticationRequest *request = [[NeuraAuthenticationRequest alloc] initWithController:self];
     [NeuraSDK.shared authenticateWithRequest:request callback:^(NeuraAuthenticationResult * _Nonnull result) {
         if (result.error) {
             // Handle authentication errors.
