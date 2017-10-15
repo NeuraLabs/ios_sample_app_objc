@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0877CEB01F39AB790020B59E /* PushNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 0877CEAF1F39AB790020B59E /* PushNotifications.m */; };
+		08A1AE981F933D060059BFCA /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A1AE971F933D060059BFCA /* NotificationService.m */; };
+		08A1AE9C1F933D060059BFCA /* Notifications.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 08A1AE941F933D060059BFCA /* Notifications.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		41FDB02A1D05C5EF001A50CB /* DeviceOperationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FDB0241D05C5EF001A50CB /* DeviceOperationsViewController.xib */; };
 		41FDB02B1D05C5EF001A50CB /* DeviceOperationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */; };
 		41FDB02C1D05C5EF001A50CB /* StringPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FDB0271D05C5EF001A50CB /* StringPicker.xib */; };
@@ -27,7 +29,28 @@
 		B2FB410D1DC1E79800C9128C /* NeuraSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		08A1AE9A1F933D060059BFCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65A64B901B8E13170090FAFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08A1AE931F933D060059BFCA;
+			remoteInfo = Notifications;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		08A1AEA01F933D060059BFCA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				08A1AE9C1F933D060059BFCA /* Notifications.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2FB410E1DC1E79800C9128C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,6 +68,10 @@
 		0877CEAE1F39AB790020B59E /* PushNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotifications.h; sourceTree = "<group>"; };
 		0877CEAF1F39AB790020B59E /* PushNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotifications.m; sourceTree = "<group>"; };
 		0877CEB11F39CC990020B59E /* NeuraSDKSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NeuraSDKSampleApp.entitlements; sourceTree = "<group>"; };
+		08A1AE941F933D060059BFCA /* Notifications.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Notifications.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		08A1AE961F933D060059BFCA /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		08A1AE971F933D060059BFCA /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		08A1AE991F933D060059BFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41FDB0241D05C5EF001A50CB /* DeviceOperationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceOperationsViewController.xib; sourceTree = "<group>"; };
 		41FDB0251D05C5EF001A50CB /* DeviceOperationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceOperationsViewController.h; sourceTree = "<group>"; };
 		41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceOperationsViewController.m; sourceTree = "<group>"; };
@@ -60,8 +87,6 @@
 		65A64BA01B8E13170090FAFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		65A64BA81B8E13170090FAFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		65A64BAB1B8E13170090FAFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		65A64BB61B8E13170090FAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65A64BB71B8E13170090FAFB /* NeuraSDKSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeuraSDKSampleAppTests.m; sourceTree = "<group>"; };
 		65AE5A451BA985A600824D2D /* SubscriptionsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionsListViewController.h; sourceTree = "<group>"; };
 		65AE5A461BA985A600824D2D /* SubscriptionsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionsListViewController.m; sourceTree = "<group>"; };
 		65AE5A4B1BA9909400824D2D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +101,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		08A1AE911F933D060059BFCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65A64B951B8E13170090FAFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -96,6 +128,16 @@
 			name = PushNotifications;
 			path = neurasdksampleapp/PushNotifications;
 			sourceTree = SOURCE_ROOT;
+		};
+		08A1AE951F933D060059BFCA /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				08A1AE961F933D060059BFCA /* NotificationService.h */,
+				08A1AE971F933D060059BFCA /* NotificationService.m */,
+				08A1AE991F933D060059BFCA /* Info.plist */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
 		};
 		41FDB02E1D05C658001A50CB /* DeviceOperationsViewController */ = {
 			isa = PBXGroup;
@@ -142,7 +184,7 @@
 			children = (
 				B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */,
 				65A64B9A1B8E13170090FAFB /* NeuraSDKSampleApp */,
-				65A64BB41B8E13170090FAFB /* NeuraSDKSampleAppTests */,
+				08A1AE951F933D060059BFCA /* Notifications */,
 				65A64B991B8E13170090FAFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				65A64B981B8E13170090FAFB /* NeuraSDKSampleApp.app */,
+				08A1AE941F933D060059BFCA /* Notifications.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,23 +229,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		65A64BB41B8E13170090FAFB /* NeuraSDKSampleAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				65A64BB71B8E13170090FAFB /* NeuraSDKSampleAppTests.m */,
-				65A64BB51B8E13170090FAFB /* Supporting Files */,
-			);
-			path = NeuraSDKSampleAppTests;
-			sourceTree = "<group>";
-		};
-		65A64BB51B8E13170090FAFB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				65A64BB61B8E13170090FAFB /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		65AE5A521BA990DB00824D2D /* Table View Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +242,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		08A1AE931F933D060059BFCA /* Notifications */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08A1AE9D1F933D060059BFCA /* Build configuration list for PBXNativeTarget "Notifications" */;
+			buildPhases = (
+				08A1AE901F933D060059BFCA /* Sources */,
+				08A1AE911F933D060059BFCA /* Frameworks */,
+				08A1AE921F933D060059BFCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Notifications;
+			productName = Notifications;
+			productReference = 08A1AE941F933D060059BFCA /* Notifications.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		65A64B971B8E13170090FAFB /* NeuraSDKSampleApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65A64BBB1B8E13170090FAFB /* Build configuration list for PBXNativeTarget "NeuraSDKSampleApp" */;
@@ -224,10 +267,12 @@
 				65A64B951B8E13170090FAFB /* Frameworks */,
 				65A64B961B8E13170090FAFB /* Resources */,
 				B2FB410E1DC1E79800C9128C /* Embed Frameworks */,
+				08A1AEA01F933D060059BFCA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				08A1AE9B1F933D060059BFCA /* PBXTargetDependency */,
 			);
 			name = NeuraSDKSampleApp;
 			productName = NeuraSDKSampleApp;
@@ -243,6 +288,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Neura;
 				TargetAttributes = {
+					08A1AE931F933D060059BFCA = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = UF894MT86P;
+						ProvisioningStyle = Automatic;
+					};
 					65A64B971B8E13170090FAFB = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = UF894MT86P;
@@ -277,11 +327,19 @@
 			projectRoot = "";
 			targets = (
 				65A64B971B8E13170090FAFB /* NeuraSDKSampleApp */,
+				08A1AE931F933D060059BFCA /* Notifications */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		08A1AE921F933D060059BFCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65A64B961B8E13170090FAFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,6 +356,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		08A1AE901F933D060059BFCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08A1AE981F933D060059BFCA /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65A64B941B8E13170090FAFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +383,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		08A1AE9B1F933D060059BFCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08A1AE931F933D060059BFCA /* Notifications */;
+			targetProxy = 08A1AE9A1F933D060059BFCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		65A64BAA1B8E13170090FAFB /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
@@ -329,6 +403,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		08A1AE9E1F933D060059BFCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UF894MT86P;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Notifications/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.neura.sdk.sampleApp.Notifications;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		08A1AE9F1F933D060059BFCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UF894MT86P;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Notifications/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.neura.sdk.sampleApp.Notifications;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		65A64BB91B8E13170090FAFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -444,7 +565,7 @@
 					"$(PROJECT_DIR)/NeuraSDKSampleApp",
 				);
 				INFOPLIST_FILE = NeuraSDKSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
@@ -470,7 +591,7 @@
 					"$(PROJECT_DIR)/NeuraSDKSampleApp",
 				);
 				INFOPLIST_FILE = NeuraSDKSampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
@@ -483,6 +604,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		08A1AE9D1F933D060059BFCA /* Build configuration list for PBXNativeTarget "Notifications" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08A1AE9E1F933D060059BFCA /* Debug */,
+				08A1AE9F1F933D060059BFCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		65A64B931B8E13170090FAFB /* Build configuration list for PBXProject "neurasdksampleapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
