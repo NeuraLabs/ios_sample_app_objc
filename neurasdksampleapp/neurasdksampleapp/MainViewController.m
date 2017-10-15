@@ -117,8 +117,7 @@
     }
     
     [self.view addDarkLayerWithAlpha:0.5];
-    //NeuraAnonymousAuthenticationRequest *request = [NeuraAnonymousAuthenticationRequest new];
-    NeuraAuthenticationRequest *request = [[NeuraAuthenticationRequest alloc] initWithController:self];
+    NeuraAnonymousAuthenticationRequest *request = [NeuraAnonymousAuthenticationRequest new];
     [NeuraSDK.shared authenticateWithRequest:request callback:^(NeuraAuthenticationResult * _Nonnull result) {
         if (result.error) {
             // Handle authentication errors.
