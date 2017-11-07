@@ -142,39 +142,26 @@
 
 -(void)alertAboutMissingDataForEventNamed:(NSString *)eventName subscribeSwitch:(UISwitch *)subscribeSwitch {
     UIAlertController *alert = [UIAlertController
-                                alertControllerWithTitle:NSLocalizedString(@"The place has not been set yet. Create it now?", "The place has not been set yet. Create it now?")
+                                alertControllerWithTitle:NSLocalizedString(@"A related place node should be added, before you can subscribe to this event. Would you like to subscribe anyway?", @"A related place node should be added, before you can subscribe to this event. Would you like to subscribe anyway?")
                                 message:nil
                                 preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *ok = [UIAlertAction actionWithTitle:NSLocalizedString(@"Yes", @"Yes") style:UIAlertActionStyleDefault
                                                handler:^(UIAlertAction * action) {
                                                    cellSwitch = subscribeSwitch;
-                                                   [self showTheMissingDataToEvent:eventName];
+                                                   [self subscribeToEvent:eventName];
                                                    
                                                }];
     
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"I will wait", @"I will wait") style:UIAlertActionStyleDefault
                                                    handler:^(UIAlertAction * action) {
-                                                       [self subscribeToEvent:eventName];
+                                                       [subscribeSwitch setOn:false];
                                                        [alert dismissViewControllerAnimated:YES completion:nil];
                                                    }];
     [alert addAction:ok];
     [alert addAction:cancel];
     [self presentViewController:alert animated:YES completion:nil];
 }
-
--(void)showTheMissingDataToEvent:(NSString *)eventName {
-    [NeuraSDK.shared getMissingDataForEvent:eventName withCallback:^(NeuraAPIResult * _Nonnull result) {
-        if (result.success) {
-            [self subscribeToEvent:eventName];
-        } else {
-            cellSwitch.on = NO;
-            cellSwitch = nil;
-        }
-    }];
-}
-
-
 
 - (void)subscribeToEvent:(NSString *)eventName {
     [self showActivityIndicator:YES];

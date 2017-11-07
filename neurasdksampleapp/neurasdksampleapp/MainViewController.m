@@ -12,7 +12,7 @@
 #import "UIView+AppAddon.h"
 #import "PushNotifications.h"
 
-@interface MainViewController () <NeuraAuthenticationStateDelegate>
+@interface MainViewController ()
 
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UILabel *appVersionLabel;
@@ -37,10 +37,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    
-    // (optional) Set an authentication state delegate to get updates
-    // when the Neura authentication state changes.
-    NeuraSDK.shared.authenticationStateDelegate = self;
 }
 
 #pragma mark - UI Updated based on authentication state
@@ -124,7 +120,7 @@
             NSLog(@"login error = %@", result.error);
         }
         [self updateSymbolState];
-        [self updateAuthenticationButtonState];
+        [self neuraAuthStateUpdated];
         [self.view removeDarkLayer];
     }];
 }
@@ -134,11 +130,11 @@
     
     [NeuraSDK.shared logoutWithCallback:^(NeuraLogoutResult * _Nonnull result) {
         [self updateSymbolState];
+        [self neuraAuthStateUpdated];
     }];
 }
 
-#pragma mark - NeuraAuthenticationStateDelegate
-- (void)neuraAuthStateUpdated:(NeuraAuthState)state {
+- (void)neuraAuthStateUpdated {
     [self updateAuthenticationButtonState];
     [self updateAuthenticationLabelState];
 }
