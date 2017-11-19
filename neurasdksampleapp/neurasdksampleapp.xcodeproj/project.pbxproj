@@ -14,6 +14,8 @@
 		41FDB02B1D05C5EF001A50CB /* DeviceOperationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */; };
 		41FDB02C1D05C5EF001A50CB /* StringPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FDB0271D05C5EF001A50CB /* StringPicker.xib */; };
 		41FDB02D1D05C5F0001A50CB /* StringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0291D05C5EF001A50CB /* StringPicker.m */; };
+		556FA9CE1FC186F9004EF535 /* NXPlacePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556FA9C71FC1829A004EF535 /* NXPlacePicker.framework */; };
+		556FA9CF1FC186F9004EF535 /* NXPlacePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 556FA9C71FC1829A004EF535 /* NXPlacePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6529B2A61BB04DC9008EC021 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6529B2A51BB04DC9008EC021 /* MainViewController.m */; };
 		65A64B9E1B8E13170090FAFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64B9D1B8E13170090FAFB /* main.m */; };
 		65A64BA11B8E13170090FAFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64BA01B8E13170090FAFB /* AppDelegate.m */; };
@@ -78,6 +80,7 @@
 		41FDB0271D05C5EF001A50CB /* StringPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StringPicker.xib; sourceTree = "<group>"; };
 		41FDB0281D05C5EF001A50CB /* StringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringPicker.h; sourceTree = "<group>"; };
 		41FDB0291D05C5EF001A50CB /* StringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringPicker.m; sourceTree = "<group>"; };
+		556FA9C71FC1829A004EF535 /* NXPlacePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NXPlacePicker.framework; sourceTree = "<group>"; };
 		6529B2A41BB04DC9008EC021 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		6529B2A51BB04DC9008EC021 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		65A64B981B8E13170090FAFB /* NeuraSDKSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeuraSDKSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2FB410C1DC1E79800C9128C /* NeuraSDK.framework in Frameworks */,
+				556FA9CE1FC186F9004EF535 /* NXPlacePicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
