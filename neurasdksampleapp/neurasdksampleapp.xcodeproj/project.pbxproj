@@ -14,6 +14,8 @@
 		41FDB02B1D05C5EF001A50CB /* DeviceOperationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */; };
 		41FDB02C1D05C5EF001A50CB /* StringPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FDB0271D05C5EF001A50CB /* StringPicker.xib */; };
 		41FDB02D1D05C5F0001A50CB /* StringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0291D05C5EF001A50CB /* StringPicker.m */; };
+		55F5FBFF2029BB340027FDE2 /* NeuraSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */; };
+		55F5FC002029BB340027FDE2 /* NeuraSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6529B2A61BB04DC9008EC021 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6529B2A51BB04DC9008EC021 /* MainViewController.m */; };
 		65A64B9E1B8E13170090FAFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64B9D1B8E13170090FAFB /* main.m */; };
 		65A64BA11B8E13170090FAFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64BA01B8E13170090FAFB /* AppDelegate.m */; };
@@ -25,8 +27,6 @@
 		65AE5A511BA990C400824D2D /* SubscriptionsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65AE5A4F1BA990C400824D2D /* SubscriptionsListTableViewCell.xib */; };
 		65C573B11BA561D9000AD514 /* PermissionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C573B01BA561D9000AD514 /* PermissionsListViewController.m */; };
 		B26755AE1D758D6F005E2FF2 /* UIView+AppAddon.m in Sources */ = {isa = PBXBuildFile; fileRef = B26755AC1D758D6F005E2FF2 /* UIView+AppAddon.m */; };
-		B2FB410C1DC1E79800C9128C /* NeuraSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */; };
-		B2FB410D1DC1E79800C9128C /* NeuraSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,13 +51,13 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B2FB410E1DC1E79800C9128C /* Embed Frameworks */ = {
+		55F5FC012029BB350027FDE2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B2FB410D1DC1E79800C9128C /* NeuraSDK.framework in Embed Frameworks */,
+				55F5FC002029BB340027FDE2 /* NeuraSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2FB410C1DC1E79800C9128C /* NeuraSDK.framework in Frameworks */,
+				55F5FBFF2029BB340027FDE2 /* NeuraSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +266,8 @@
 				65A64B941B8E13170090FAFB /* Sources */,
 				65A64B951B8E13170090FAFB /* Frameworks */,
 				65A64B961B8E13170090FAFB /* Resources */,
-				B2FB410E1DC1E79800C9128C /* Embed Frameworks */,
 				08A1AEA01F933D060059BFCA /* Embed App Extensions */,
+				55F5FC012029BB350027FDE2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
