@@ -14,12 +14,14 @@
 		41FDB02B1D05C5EF001A50CB /* DeviceOperationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */; };
 		41FDB02C1D05C5EF001A50CB /* StringPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FDB0271D05C5EF001A50CB /* StringPicker.xib */; };
 		41FDB02D1D05C5F0001A50CB /* StringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0291D05C5EF001A50CB /* StringPicker.m */; };
-		55F5FBFF2029BB340027FDE2 /* NeuraSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */; };
-		55F5FC002029BB340027FDE2 /* NeuraSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		556FA9CD1FC183DC004EF535 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556FA9CC1FC183DC004EF535 /* images.xcassets */; };
+		556FA9CE1FC186F9004EF535 /* NXPlacePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556FA9C71FC1829A004EF535 /* NXPlacePicker.framework */; };
+		556FA9CF1FC186F9004EF535 /* NXPlacePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 556FA9C71FC1829A004EF535 /* NXPlacePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		55F5FBFD2029B6830027FDE2 /* NeuraSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F5FBFB2029B6540027FDE2 /* NeuraSDK.framework */; };
+		55F5FBFE2029B6830027FDE2 /* NeuraSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55F5FBFB2029B6540027FDE2 /* NeuraSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6529B2A61BB04DC9008EC021 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6529B2A51BB04DC9008EC021 /* MainViewController.m */; };
 		65A64B9E1B8E13170090FAFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64B9D1B8E13170090FAFB /* main.m */; };
 		65A64BA11B8E13170090FAFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64BA01B8E13170090FAFB /* AppDelegate.m */; };
-		65A64BA91B8E13170090FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A64BA81B8E13170090FAFB /* Images.xcassets */; };
 		65A64BAC1B8E13170090FAFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A64BAA1B8E13170090FAFB /* LaunchScreen.xib */; };
 		65AE5A471BA985A600824D2D /* SubscriptionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AE5A461BA985A600824D2D /* SubscriptionsListViewController.m */; };
 		65AE5A4C1BA9909400824D2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65AE5A4B1BA9909400824D2D /* Main.storyboard */; };
@@ -51,13 +53,14 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55F5FC012029BB350027FDE2 /* Embed Frameworks */ = {
+		556FA9CB1FC18355004EF535 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				55F5FC002029BB340027FDE2 /* NeuraSDK.framework in Embed Frameworks */,
+				556FA9CF1FC186F9004EF535 /* NXPlacePicker.framework in Embed Frameworks */,
+				55F5FBFE2029B6830027FDE2 /* NeuraSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +81,9 @@
 		41FDB0271D05C5EF001A50CB /* StringPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StringPicker.xib; sourceTree = "<group>"; };
 		41FDB0281D05C5EF001A50CB /* StringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringPicker.h; sourceTree = "<group>"; };
 		41FDB0291D05C5EF001A50CB /* StringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringPicker.m; sourceTree = "<group>"; };
+		556FA9C71FC1829A004EF535 /* NXPlacePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NXPlacePicker.framework; sourceTree = "<group>"; };
+		556FA9CC1FC183DC004EF535 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = images.xcassets; path = neurasdksampleapp/images.xcassets; sourceTree = SOURCE_ROOT; };
+		55F5FBFB2029B6540027FDE2 /* NeuraSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NeuraSDK.framework; path = neurasdksampleapp/NeuraSDK.framework; sourceTree = "<group>"; };
 		6529B2A41BB04DC9008EC021 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		6529B2A51BB04DC9008EC021 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		65A64B981B8E13170090FAFB /* NeuraSDKSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeuraSDKSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +91,6 @@
 		65A64B9D1B8E13170090FAFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65A64B9F1B8E13170090FAFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65A64BA01B8E13170090FAFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		65A64BA81B8E13170090FAFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		65A64BAB1B8E13170090FAFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		65AE5A451BA985A600824D2D /* SubscriptionsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionsListViewController.h; sourceTree = "<group>"; };
 		65AE5A461BA985A600824D2D /* SubscriptionsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionsListViewController.m; sourceTree = "<group>"; };
@@ -97,7 +102,6 @@
 		65C573B01BA561D9000AD514 /* PermissionsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionsListViewController.m; sourceTree = "<group>"; };
 		B26755AC1D758D6F005E2FF2 /* UIView+AppAddon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+AppAddon.m"; path = "neurasdksampleapp/UIView+AppAddon.m"; sourceTree = SOURCE_ROOT; };
 		B26755AD1D758D6F005E2FF2 /* UIView+AppAddon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+AppAddon.h"; path = "neurasdksampleapp/UIView+AppAddon.h"; sourceTree = SOURCE_ROOT; };
-		B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NeuraSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F5FBFF2029BB340027FDE2 /* NeuraSDK.framework in Frameworks */,
+				556FA9CE1FC186F9004EF535 /* NXPlacePicker.framework in Frameworks */,
+				55F5FBFD2029B6830027FDE2 /* NeuraSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +187,8 @@
 		65A64B8F1B8E13170090FAFB = {
 			isa = PBXGroup;
 			children = (
-				B2FB410A1DC1E79100C9128C /* NeuraSDK.framework */,
+				55F5FBFB2029B6540027FDE2 /* NeuraSDK.framework */,
+				556FA9C71FC1829A004EF535 /* NXPlacePicker.framework */,
 				65A64B9A1B8E13170090FAFB /* NeuraSDKSampleApp */,
 				08A1AE951F933D060059BFCA /* Notifications */,
 				65A64B991B8E13170090FAFB /* Products */,
@@ -201,6 +207,7 @@
 		65A64B9A1B8E13170090FAFB /* NeuraSDKSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				556FA9CC1FC183DC004EF535 /* images.xcassets */,
 				0877CEB11F39CC990020B59E /* NeuraSDKSampleApp.entitlements */,
 				65AE5A4B1BA9909400824D2D /* Main.storyboard */,
 				65A64B9F1B8E13170090FAFB /* AppDelegate.h */,
@@ -211,7 +218,6 @@
 				657345A81C49176F0061844C /* Subscriptions List View Controller */,
 				65AE5A521BA990DB00824D2D /* Table View Cell */,
 				41FDB02E1D05C658001A50CB /* DeviceOperationsViewController */,
-				65A64BA81B8E13170090FAFB /* Images.xcassets */,
 				65A64BAA1B8E13170090FAFB /* LaunchScreen.xib */,
 				65A64B9B1B8E13170090FAFB /* Supporting Files */,
 			);
@@ -267,7 +273,7 @@
 				65A64B951B8E13170090FAFB /* Frameworks */,
 				65A64B961B8E13170090FAFB /* Resources */,
 				08A1AEA01F933D060059BFCA /* Embed App Extensions */,
-				55F5FC012029BB350027FDE2 /* Embed Frameworks */,
+				556FA9CB1FC18355004EF535 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,8 +353,8 @@
 				41FDB02C1D05C5EF001A50CB /* StringPicker.xib in Resources */,
 				65AE5A4C1BA9909400824D2D /* Main.storyboard in Resources */,
 				65A64BAC1B8E13170090FAFB /* LaunchScreen.xib in Resources */,
+				556FA9CD1FC183DC004EF535 /* images.xcassets in Resources */,
 				65AE5A511BA990C400824D2D /* SubscriptionsListTableViewCell.xib in Resources */,
-				65A64BA91B8E13170090FAFB /* Images.xcassets in Resources */,
 				41FDB02A1D05C5EF001A50CB /* DeviceOperationsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,6 +569,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/NeuraSDKSampleApp",
+					"$(PROJECT_DIR)/neurasdksampleapp",
 				);
 				INFOPLIST_FILE = NeuraSDKSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -589,6 +596,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/NeuraSDKSampleApp",
+					"$(PROJECT_DIR)/neurasdksampleapp",
 				);
 				INFOPLIST_FILE = NeuraSDKSampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
