@@ -89,7 +89,7 @@ SubscriptionManager * subscriptionManager;
         case NeuraAuthStateAuthenticated:
         case NeuraAuthStateAuthenticatedAnonymously:
             color = [UIColor colorWithRed:0 green:0.4 blue:0 alpha:1.0];
-            text = @"Connected";
+            text = [NeuraSDK.shared neuraUserId];
             break;
         case NeuraAuthStateFailedReceivingAccessToken:
             color = [UIColor redColor];
