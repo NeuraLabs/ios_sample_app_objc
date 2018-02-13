@@ -23,9 +23,9 @@
     
     NSDictionary *pushData = request.content.userInfo[@"data"][@"pushData"];
     NSString *pushType = request.content.userInfo[@"data"][@"pushType"];
-    NSString *eventName = pushData[@"event"][@"name"];
-    NSString *eventId = pushData[@"event"][@"neuraId"];
     NSNumber *timestampNumber = pushData[@"event"][@"timestamp"];
+    NSString *eventId = pushData[@"event"][@"neuraId"];
+    NSString *eventName = pushData[@"event"][@"name"];
 
     // Title
     if ([pushType isEqualToString:@"neura_event"]) {

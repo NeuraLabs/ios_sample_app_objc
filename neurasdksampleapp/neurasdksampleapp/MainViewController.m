@@ -11,6 +11,7 @@
 #import "DeviceOperationsViewController.h"
 #import "UIView+AppAddon.h"
 #import "PushNotifications.h"
+#import "SubscriptionManager.h"
 
 @interface MainViewController ()
 
@@ -18,25 +19,37 @@
 @property (weak, nonatomic) IBOutlet UILabel *appVersionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sdkVersionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *neuraStatusLabel;
-@property (strong, nonatomic) IBOutlet UIButton *permissionsListButton;
-@property (strong, nonatomic) IBOutlet UIButton *NeuraSettingsPanelButton;
+@property (weak, nonatomic) IBOutlet UIButton *permissionListButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *SubscriptionListButton;
+
 @property (strong, nonatomic) IBOutlet UIImageView *neuraSymbolTopmImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *neuraSymbolBottomImageView;
 
+
+
 - (IBAction)loginButtonPressed:(id)sender;
-- (IBAction)permissionsListPressed:(id)sender;
 - (IBAction)DeviceOperationsButtonClick:(id)sender;
 - (IBAction)openNeuraSettingsPanelButtonClick:(id)sender;
+
+- (IBAction)permissionListPressed:(id)sender;
+
+- (IBAction)SubscriptionListPressed:(id)sender;
+- (IBAction)simulateEventPressed:(id)sender;
 
 @end
 
 
 @implementation MainViewController
+SubscriptionManager * subscriptionManager;
 
 #pragma mark - VC Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
+    subscriptionManager = [SubscriptionManager new];
+    [subscriptionManager checkSubscriptions];
+    self.SubscriptionListButton.hidden = YES;
 }
 
 #pragma mark - UI Updated based on authentication state
@@ -63,13 +76,6 @@
 }
 
 #pragma mark - UI updates based on authentication state
-- (void)updateButtonsState {
-    if (NeuraSDK.shared.isAuthenticated) {
-        [self.permissionsListButton setTitle:@"Edit Subscriptions" forState:UIControlStateNormal];
-    } else {
-        [self.permissionsListButton setTitle:@"Permissions List" forState:UIControlStateNormal];
-    }
-}
 
 - (void)updateAuthenticationLabelState {
     NeuraAuthState authState = NeuraSDK.shared.authenticationState;
@@ -95,7 +101,6 @@
     }
     self.neuraStatusLabel.text = text;
     self.neuraStatusLabel.textColor = color;
-    [self updateButtonsState];
 }
 
 #pragma mark - Authentication
@@ -183,12 +188,32 @@
     }
 }
 
+- (IBAction)permissionsListPressed:(id)sender {
+}
+
+
 - (IBAction)openNeuraSettingsPanelButtonClick:(id)sender {
     if (NeuraSDK.shared.isAuthenticated) {
         [NeuraSDK.shared openNeuraSettingsPanel];
     } else {
         [self showUserNotLoggedInAlert];
     }
+}
+
+- (IBAction)permissionListPressed:(id)sender {
+      [self performSegueWithIdentifier:@"permissionsList" sender:self];
+}
+
+- (IBAction)SubscriptionListPressed:(id)sender {
+    if (NeuraSDK.shared.isAuthenticated) {
+        [self performSegueWithIdentifier:@"SubscriptionsList" sender:self];
+    } else {
+         [self showUserNotLoggedInAlert];
+    }
+}
+
+- (IBAction)simulateEventPressed:(id)sender {
+     [self performSegueWithIdentifier:@"EventsList" sender:self];
 }
 
 - (IBAction)DeviceOperationsButtonClick:(id)sender {
@@ -200,12 +225,5 @@
     }
 }
 
-- (IBAction)permissionsListPressed:(id)sender {
-    if (NeuraSDK.shared.isAuthenticated) {
-        [self performSegueWithIdentifier:@"SubscriptionsList" sender:self];
-    } else {
-        [self performSegueWithIdentifier:@"permissionsList" sender:self];
-    }
-}
 
 @end

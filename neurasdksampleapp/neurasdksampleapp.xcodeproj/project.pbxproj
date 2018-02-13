@@ -14,11 +14,12 @@
 		41FDB02B1D05C5EF001A50CB /* DeviceOperationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */; };
 		41FDB02C1D05C5EF001A50CB /* StringPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FDB0271D05C5EF001A50CB /* StringPicker.xib */; };
 		41FDB02D1D05C5F0001A50CB /* StringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FDB0291D05C5EF001A50CB /* StringPicker.m */; };
+		553406EC203196DB00D0D293 /* SimulateEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 553406E8203196DA00D0D293 /* SimulateEventTableViewCell.m */; };
+		553406ED203196DB00D0D293 /* SendEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553406EB203196DB00D0D293 /* SendEventsViewController.m */; };
+		553406F120319F9E00D0D293 /* SubscriptionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 553406F020319F9E00D0D293 /* SubscriptionManager.m */; };
 		556FA9CD1FC183DC004EF535 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556FA9CC1FC183DC004EF535 /* images.xcassets */; };
-		55F5FC282029CE280027FDE2 /* NXPlacePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F5FC242029CE040027FDE2 /* NXPlacePicker.framework */; };
-		55F5FC292029CE280027FDE2 /* NXPlacePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55F5FC242029CE040027FDE2 /* NXPlacePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		55F5FC2C2029CF010027FDE2 /* NeuraSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F5FC2A2029CEE60027FDE2 /* NeuraSDK.framework */; };
-		55F5FC2D2029CF010027FDE2 /* NeuraSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55F5FC2A2029CEE60027FDE2 /* NeuraSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		55F5FC322029D4E80027FDE2 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F5FC312029D4E80027FDE2 /* RoundedButton.m */; };
+		60732851933A395B1A6C025E /* Pods_Notifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4461E27F33BEBF75367BA5 /* Pods_Notifications.framework */; };
 		6529B2A61BB04DC9008EC021 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6529B2A51BB04DC9008EC021 /* MainViewController.m */; };
 		65A64B9E1B8E13170090FAFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64B9D1B8E13170090FAFB /* main.m */; };
 		65A64BA11B8E13170090FAFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64BA01B8E13170090FAFB /* AppDelegate.m */; };
@@ -28,6 +29,7 @@
 		65AE5A501BA990C400824D2D /* SubscriptionsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AE5A4E1BA990C400824D2D /* SubscriptionsListTableViewCell.m */; };
 		65AE5A511BA990C400824D2D /* SubscriptionsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65AE5A4F1BA990C400824D2D /* SubscriptionsListTableViewCell.xib */; };
 		65C573B11BA561D9000AD514 /* PermissionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C573B01BA561D9000AD514 /* PermissionsListViewController.m */; };
+		6C41AA4DCE0C2E567EFD74F0 /* Pods_NeuraSDKSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EB05BB2DA173F487871D87 /* Pods_NeuraSDKSampleApp.framework */; };
 		B26755AE1D758D6F005E2FF2 /* UIView+AppAddon.m in Sources */ = {isa = PBXBuildFile; fileRef = B26755AC1D758D6F005E2FF2 /* UIView+AppAddon.m */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +61,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				55F5FC292029CE280027FDE2 /* NXPlacePicker.framework in Embed Frameworks */,
-				55F5FC2D2029CF010027FDE2 /* NeuraSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,15 +75,24 @@
 		08A1AE961F933D060059BFCA /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		08A1AE971F933D060059BFCA /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		08A1AE991F933D060059BFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11EB05BB2DA173F487871D87 /* Pods_NeuraSDKSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeuraSDKSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D72E5CA8712A09228D3CDE3 /* Pods-Notifications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notifications.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Notifications/Pods-Notifications.debug.xcconfig"; sourceTree = "<group>"; };
 		41FDB0241D05C5EF001A50CB /* DeviceOperationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceOperationsViewController.xib; sourceTree = "<group>"; };
 		41FDB0251D05C5EF001A50CB /* DeviceOperationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceOperationsViewController.h; sourceTree = "<group>"; };
 		41FDB0261D05C5EF001A50CB /* DeviceOperationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceOperationsViewController.m; sourceTree = "<group>"; };
 		41FDB0271D05C5EF001A50CB /* StringPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StringPicker.xib; sourceTree = "<group>"; };
 		41FDB0281D05C5EF001A50CB /* StringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringPicker.h; sourceTree = "<group>"; };
 		41FDB0291D05C5EF001A50CB /* StringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringPicker.m; sourceTree = "<group>"; };
+		553406E8203196DA00D0D293 /* SimulateEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulateEventTableViewCell.m; sourceTree = "<group>"; };
+		553406E9203196DA00D0D293 /* SimulateEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulateEventTableViewCell.h; sourceTree = "<group>"; };
+		553406EA203196DB00D0D293 /* SendEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendEventsViewController.h; sourceTree = "<group>"; };
+		553406EB203196DB00D0D293 /* SendEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendEventsViewController.m; sourceTree = "<group>"; };
+		553406EF20319F9E00D0D293 /* SubscriptionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SubscriptionManager.h; path = neurasdksampleapp/SubscriptionManager.h; sourceTree = SOURCE_ROOT; };
+		553406F020319F9E00D0D293 /* SubscriptionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SubscriptionManager.m; path = neurasdksampleapp/SubscriptionManager.m; sourceTree = SOURCE_ROOT; };
 		556FA9CC1FC183DC004EF535 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = images.xcassets; path = neurasdksampleapp/images.xcassets; sourceTree = SOURCE_ROOT; };
-		55F5FC242029CE040027FDE2 /* NXPlacePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NXPlacePicker.framework; sourceTree = "<group>"; };
-		55F5FC2A2029CEE60027FDE2 /* NeuraSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NeuraSDK.framework; sourceTree = "<group>"; };
+		55F5FC302029D4E80027FDE2 /* RoundedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedButton.h; sourceTree = "<group>"; };
+		55F5FC312029D4E80027FDE2 /* RoundedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedButton.m; sourceTree = "<group>"; };
+		5A4461E27F33BEBF75367BA5 /* Pods_Notifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6529B2A41BB04DC9008EC021 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		6529B2A51BB04DC9008EC021 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		65A64B981B8E13170090FAFB /* NeuraSDKSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeuraSDKSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,8 +109,11 @@
 		65AE5A4F1BA990C400824D2D /* SubscriptionsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionsListTableViewCell.xib; sourceTree = "<group>"; };
 		65C573AF1BA561D9000AD514 /* PermissionsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionsListViewController.h; sourceTree = "<group>"; };
 		65C573B01BA561D9000AD514 /* PermissionsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionsListViewController.m; sourceTree = "<group>"; };
+		9E99DB3E7B2597471AD76557 /* Pods-NeuraSDKSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeuraSDKSampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		B26755AC1D758D6F005E2FF2 /* UIView+AppAddon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+AppAddon.m"; path = "neurasdksampleapp/UIView+AppAddon.m"; sourceTree = SOURCE_ROOT; };
 		B26755AD1D758D6F005E2FF2 /* UIView+AppAddon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+AppAddon.h"; path = "neurasdksampleapp/UIView+AppAddon.h"; sourceTree = SOURCE_ROOT; };
+		F065E4E7450351709404BA65 /* Pods-NeuraSDKSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeuraSDKSampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F4582DF00A3294CAD1146375 /* Pods-Notifications.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notifications.release.xcconfig"; path = "Pods/Target Support Files/Pods-Notifications/Pods-Notifications.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60732851933A395B1A6C025E /* Pods_Notifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F5FC282029CE280027FDE2 /* NXPlacePicker.framework in Frameworks */,
-				55F5FC2C2029CF010027FDE2 /* NeuraSDK.framework in Frameworks */,
+				6C41AA4DCE0C2E567EFD74F0 /* Pods_NeuraSDKSampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +169,28 @@
 			name = DeviceOperationsViewController;
 			sourceTree = "<group>";
 		};
+		53398B0073F68F9F6F1EB867 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F065E4E7450351709404BA65 /* Pods-NeuraSDKSampleApp.debug.xcconfig */,
+				9E99DB3E7B2597471AD76557 /* Pods-NeuraSDKSampleApp.release.xcconfig */,
+				3D72E5CA8712A09228D3CDE3 /* Pods-Notifications.debug.xcconfig */,
+				F4582DF00A3294CAD1146375 /* Pods-Notifications.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		553406EE203196E800D0D293 /* SimulateEvent */ = {
+			isa = PBXGroup;
+			children = (
+				553406EA203196DB00D0D293 /* SendEventsViewController.h */,
+				553406EB203196DB00D0D293 /* SendEventsViewController.m */,
+				553406E9203196DA00D0D293 /* SimulateEventTableViewCell.h */,
+				553406E8203196DA00D0D293 /* SimulateEventTableViewCell.m */,
+			);
+			name = SimulateEvent;
+			sourceTree = "<group>";
+		};
 		657345A81C49176F0061844C /* Subscriptions List View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,11 +221,11 @@
 		65A64B8F1B8E13170090FAFB = {
 			isa = PBXGroup;
 			children = (
-				55F5FC2A2029CEE60027FDE2 /* NeuraSDK.framework */,
-				55F5FC242029CE040027FDE2 /* NXPlacePicker.framework */,
 				65A64B9A1B8E13170090FAFB /* NeuraSDKSampleApp */,
 				08A1AE951F933D060059BFCA /* Notifications */,
 				65A64B991B8E13170090FAFB /* Products */,
+				53398B0073F68F9F6F1EB867 /* Pods */,
+				A205289AE5301DBE1D2128FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,6 +241,7 @@
 		65A64B9A1B8E13170090FAFB /* NeuraSDKSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				553406EE203196E800D0D293 /* SimulateEvent */,
 				556FA9CC1FC183DC004EF535 /* images.xcassets */,
 				0877CEB11F39CC990020B59E /* NeuraSDKSampleApp.entitlements */,
 				65AE5A4B1BA9909400824D2D /* Main.storyboard */,
@@ -220,6 +255,10 @@
 				41FDB02E1D05C658001A50CB /* DeviceOperationsViewController */,
 				65A64BAA1B8E13170090FAFB /* LaunchScreen.xib */,
 				65A64B9B1B8E13170090FAFB /* Supporting Files */,
+				55F5FC302029D4E80027FDE2 /* RoundedButton.h */,
+				55F5FC312029D4E80027FDE2 /* RoundedButton.m */,
+				553406EF20319F9E00D0D293 /* SubscriptionManager.h */,
+				553406F020319F9E00D0D293 /* SubscriptionManager.m */,
 			);
 			path = NeuraSDKSampleApp;
 			sourceTree = "<group>";
@@ -245,6 +284,15 @@
 			name = "Table View Cell";
 			sourceTree = "<group>";
 		};
+		A205289AE5301DBE1D2128FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11EB05BB2DA173F487871D87 /* Pods_NeuraSDKSampleApp.framework */,
+				5A4461E27F33BEBF75367BA5 /* Pods_Notifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,9 +300,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08A1AE9D1F933D060059BFCA /* Build configuration list for PBXNativeTarget "Notifications" */;
 			buildPhases = (
+				ECDE6EF0AFBC45D726ECBA2D /* [CP] Check Pods Manifest.lock */,
 				08A1AE901F933D060059BFCA /* Sources */,
 				08A1AE911F933D060059BFCA /* Frameworks */,
 				08A1AE921F933D060059BFCA /* Resources */,
+				2234A2D01A8444FD8417EC7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,11 +319,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65A64BBB1B8E13170090FAFB /* Build configuration list for PBXNativeTarget "NeuraSDKSampleApp" */;
 			buildPhases = (
+				58C9FE69A5F6CC75249B8FB6 /* [CP] Check Pods Manifest.lock */,
 				65A64B941B8E13170090FAFB /* Sources */,
 				65A64B951B8E13170090FAFB /* Frameworks */,
 				65A64B961B8E13170090FAFB /* Resources */,
 				08A1AEA01F933D060059BFCA /* Embed App Extensions */,
 				556FA9CB1FC18355004EF535 /* Embed Frameworks */,
+				A4126667BC683371FA6EBEC6 /* [CP] Embed Pods Frameworks */,
+				485C8AABB04D438E8B607D02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,6 +414,95 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2234A2D01A8444FD8417EC7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Notifications/Pods-Notifications-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		485C8AABB04D438E8B607D02 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58C9FE69A5F6CC75249B8FB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeuraSDKSampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4126667BC683371FA6EBEC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NXPlacePicker/NXPlacePicker.framework",
+				"${PODS_ROOT}/NeuraSDKFramework/NeuraSDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NXPlacePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NeuraSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECDE6EF0AFBC45D726ECBA2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Notifications-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		08A1AE901F933D060059BFCA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -374,11 +516,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553406EC203196DB00D0D293 /* SimulateEventTableViewCell.m in Sources */,
 				0877CEB01F39AB790020B59E /* PushNotifications.m in Sources */,
 				41FDB02B1D05C5EF001A50CB /* DeviceOperationsViewController.m in Sources */,
 				65A64BA11B8E13170090FAFB /* AppDelegate.m in Sources */,
+				553406F120319F9E00D0D293 /* SubscriptionManager.m in Sources */,
 				65C573B11BA561D9000AD514 /* PermissionsListViewController.m in Sources */,
 				6529B2A61BB04DC9008EC021 /* MainViewController.m in Sources */,
+				55F5FC322029D4E80027FDE2 /* RoundedButton.m in Sources */,
+				553406ED203196DB00D0D293 /* SendEventsViewController.m in Sources */,
 				65A64B9E1B8E13170090FAFB /* main.m in Sources */,
 				B26755AE1D758D6F005E2FF2 /* UIView+AppAddon.m in Sources */,
 				65AE5A501BA990C400824D2D /* SubscriptionsListTableViewCell.m in Sources */,
@@ -411,6 +557,7 @@
 /* Begin XCBuildConfiguration section */
 		08A1AE9E1F933D060059BFCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D72E5CA8712A09228D3CDE3 /* Pods-Notifications.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -435,6 +582,7 @@
 		};
 		08A1AE9F1F933D060059BFCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4582DF00A3294CAD1146375 /* Pods-Notifications.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -557,6 +705,7 @@
 		};
 		65A64BBC1B8E13170090FAFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F065E4E7450351709404BA65 /* Pods-NeuraSDKSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -584,6 +733,7 @@
 		};
 		65A64BBD1B8E13170090FAFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E99DB3E7B2597471AD76557 /* Pods-NeuraSDKSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
