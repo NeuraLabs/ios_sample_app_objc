@@ -8,10 +8,8 @@
 #import <NeuraSDK/NeuraSDK.h>
 #import <NeuraSDK/NeuraSDKPushNotification.h>
 #import "MainViewController.h"
-#import "DeviceOperationsViewController.h"
 #import "UIView+AppAddon.h"
 #import "PushNotifications.h"
-#import "SubscriptionManager.h"
 
 @interface MainViewController ()
 
@@ -29,11 +27,6 @@
 
 
 - (IBAction)loginButtonPressed:(id)sender;
-- (IBAction)DeviceOperationsButtonClick:(id)sender;
-- (IBAction)openNeuraSettingsPanelButtonClick:(id)sender;
-
-- (IBAction)permissionListPressed:(id)sender;
-
 - (IBAction)SubscriptionListPressed:(id)sender;
 - (IBAction)simulateEventPressed:(id)sender;
 
@@ -41,21 +34,17 @@
 
 
 @implementation MainViewController
-SubscriptionManager * subscriptionManager;
 
 #pragma mark - VC Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    subscriptionManager = [SubscriptionManager new];
-    [subscriptionManager checkSubscriptions];
-    self.SubscriptionListButton.hidden = YES;
 }
 
 #pragma mark - UI Updated based on authentication state
 - (void)updateSymbolState {
     BOOL isConnected = NeuraSDK.shared.isAuthenticated;
-    self.neuraSymbolTopmImageView.alpha = isConnected ? 1.0 : 0.3;
+    self.neuraSymbolTopmImageView.alpha   = isConnected ? 1.0 : 0.3;
     self.neuraSymbolBottomImageView.alpha = isConnected ? 1.0 : 0.3;
 }
 
@@ -165,19 +154,12 @@ SubscriptionManager * subscriptionManager;
                         [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
     self.appVersionLabel.text = appVer;
     
-    [self setButtonsRoundCorners];
     [self updateSymbolState];
     [self updateAuthenticationButtonState];
     [self updateAuthenticationLabelState];
 }
 
-- (void)setButtonsRoundCorners {
-    for (UIView *sub in self.view.subviews) {
-        if ([sub class] == [UIButton class]) {
-            [sub roundCorners];
-        }
-    }
-}
+
 
 #pragma mark - IB Actions
 - (IBAction)loginButtonPressed:(id)sender {
@@ -188,9 +170,6 @@ SubscriptionManager * subscriptionManager;
     }
 }
 
-- (IBAction)permissionsListPressed:(id)sender {
-}
-
 
 - (IBAction)openNeuraSettingsPanelButtonClick:(id)sender {
     if (NeuraSDK.shared.isAuthenticated) {
@@ -198,10 +177,6 @@ SubscriptionManager * subscriptionManager;
     } else {
         [self showUserNotLoggedInAlert];
     }
-}
-
-- (IBAction)permissionListPressed:(id)sender {
-      [self performSegueWithIdentifier:@"permissionsList" sender:self];
 }
 
 - (IBAction)SubscriptionListPressed:(id)sender {
@@ -214,15 +189,6 @@ SubscriptionManager * subscriptionManager;
 
 - (IBAction)simulateEventPressed:(id)sender {
      [self performSegueWithIdentifier:@"EventsList" sender:self];
-}
-
-- (IBAction)DeviceOperationsButtonClick:(id)sender {
-    if (NeuraSDK.shared.isAuthenticated) {
-        DeviceOperationsViewController *deviceOperationsViewController = [[DeviceOperationsViewController alloc] initWithNibName:@"DeviceOperationsViewController" bundle:nil];
-        [self presentViewController:deviceOperationsViewController animated:YES completion:nil];
-    } else {
-        [self showUserNotLoggedInAlert];
-    }
 }
 
 

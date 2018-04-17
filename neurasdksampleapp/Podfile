@@ -4,7 +4,6 @@
 target 'NeuraSDKSampleApp' do
    use_frameworks!
 pod 'NeuraSDKFramework'
-pod 'NXPlacePicker'
 
 end
 
