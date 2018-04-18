@@ -3,7 +3,7 @@
 
 target 'NeuraSDKSampleApp' do
    use_frameworks!
-pod 'NeuraSDKFramework'
+pod 'NeuraSDKFramework', '~> 4.9.0'
 
 end
 

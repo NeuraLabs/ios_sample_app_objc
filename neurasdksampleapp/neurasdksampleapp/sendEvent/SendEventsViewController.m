@@ -27,7 +27,7 @@
     [super viewDidLoad];
     [NeuraSDK.shared getEventsListWithCallback:^(NeuraEventsListResult * _Nonnull result){
         NSArray<NEvent *> *eventDefinitions = result.eventDefinitions;
-        _eventNames = [NSMutableArray new];
+        self.eventNames = [NSMutableArray new];
         
         if (result.eventDefinitions.count > 0) {
            for (NEvent * item in eventDefinitions) {

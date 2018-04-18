@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *appVersionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sdkVersionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *neuraStatusLabel;
-@property (weak, nonatomic) IBOutlet UIButton *permissionListButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *SubscriptionListButton;
 
@@ -39,6 +38,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
+    [self subscribe];
+}
+
+
+- (void)subscribe {
+    NSArray *requireSubscriptions = @[@"userArrivedHome",@"userLeftHome", @"userArrivedToWork", @"userLeftWork",@"userStartedDriving", @"userFinishedDriving", @"userStartedSleeping", @"userGotUp", @"userStartedWalking", @"userWokeUp", @"userFinishedWalking"];
+    
+//    declare what events you want your app to be subscribed to and let the
+//    SDK manage the subscriptions for you
+    [NeuraSDK.shared requireSubscriptionsToEvents:requireSubscriptions method:NSubscriptionMethodAll];
 }
 
 #pragma mark - UI Updated based on authentication state
