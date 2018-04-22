@@ -18,8 +18,8 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NeuraSDK.shared.appUID = @"d17aa5f39d052a42d7e8fce29fd5a7b1f47526339f3f86d08ae66979ad1a4f99";
-    NeuraSDK.shared.appSecret = @"cc5fe631ff8de1f5359468eb5086c608b7dd97538a8ac70002627b54b753d3e0";
+    NeuraSDK.shared.appUID = @"APP_UID";
+    NeuraSDK.shared.appSecret = @"APP_SECRET";
     [PushNotifications requestPermissionForPushNotifications];
     return YES;
 }
