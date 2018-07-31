@@ -1,4 +1,4 @@
-# NeuraSampleIOS
+# Neura Objective-C Sample App
 
 ##Introduction
 This is a sample code for integrating <a href="http://www.theneura.com/">Neura</a> with a native IOS application.<br/>
