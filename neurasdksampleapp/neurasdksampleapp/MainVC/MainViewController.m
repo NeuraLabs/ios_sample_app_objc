@@ -18,19 +18,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *sdkVersionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *neuraStatusLabel;
 
-@property (weak, nonatomic) IBOutlet UIButton *SubscriptionListButton;
-
 @property (strong, nonatomic) IBOutlet UIImageView *neuraSymbolTopmImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *neuraSymbolBottomImageView;
 
-
-
 - (IBAction)loginButtonPressed:(id)sender;
-- (IBAction)SubscriptionListPressed:(id)sender;
-- (IBAction)simulateEventPressed:(id)sender;
 
 @end
-
 
 @implementation MainViewController
 
@@ -38,16 +31,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    [self subscribe];
-}
-
-
-- (void)subscribe {
-    NSArray *requireSubscriptions = @[@"userArrivedHome",@"userLeftHome", @"userArrivedToWork", @"userLeftWork",@"userStartedDriving", @"userFinishedDriving", @"userStartedSleeping", @"userGotUp", @"userStartedWalking", @"userWokeUp", @"userFinishedWalking"];
-    
-//    declare what events you want your app to be subscribed to and let the
-//    SDK manage the subscriptions for you
-    [NeuraSDK.shared requireSubscriptionsToEvents:requireSubscriptions method:NSubscriptionMethodAll];
 }
 
 #pragma mark - UI Updated based on authentication state
@@ -168,8 +151,6 @@
     [self updateAuthenticationLabelState];
 }
 
-
-
 #pragma mark - IB Actions
 - (IBAction)loginButtonPressed:(id)sender {
     if (NeuraSDK.shared.isAuthenticated) {
@@ -179,7 +160,6 @@
     }
 }
 
-
 - (IBAction)openNeuraSettingsPanelButtonClick:(id)sender {
     if (NeuraSDK.shared.isAuthenticated) {
         [NeuraSDK.shared openNeuraSettingsPanel];
@@ -187,18 +167,5 @@
         [self showUserNotLoggedInAlert];
     }
 }
-
-- (IBAction)SubscriptionListPressed:(id)sender {
-    if (NeuraSDK.shared.isAuthenticated) {
-        [self performSegueWithIdentifier:@"SubscriptionsList" sender:self];
-    } else {
-         [self showUserNotLoggedInAlert];
-    }
-}
-
-- (IBAction)simulateEventPressed:(id)sender {
-     [self performSegueWithIdentifier:@"EventsList" sender:self];
-}
-
 
 @end
