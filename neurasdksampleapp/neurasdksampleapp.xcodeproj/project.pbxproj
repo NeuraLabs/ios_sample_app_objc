@@ -11,11 +11,6 @@
 		08A1AE981F933D060059BFCA /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A1AE971F933D060059BFCA /* NotificationService.m */; };
 		08A1AE9C1F933D060059BFCA /* Notifications.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 08A1AE941F933D060059BFCA /* Notifications.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		556FA9CD1FC183DC004EF535 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556FA9CC1FC183DC004EF535 /* images.xcassets */; };
-		55E47AFD20862C46000AF994 /* SubscriptionsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E47AEB20862C45000AF994 /* SubscriptionsListTableViewCell.m */; };
-		55E47AFE20862C46000AF994 /* SubscriptionsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E47AEC20862C45000AF994 /* SubscriptionsListTableViewCell.xib */; };
-		55E47AFF20862C46000AF994 /* SubscriptionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E47AED20862C45000AF994 /* SubscriptionsListViewController.m */; };
-		55E47B0020862C46000AF994 /* SendEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E47AF120862C45000AF994 /* SendEventsViewController.m */; };
-		55E47B0120862C46000AF994 /* SimulateEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E47AF220862C45000AF994 /* SimulateEventTableViewCell.m */; };
 		55E47B0220862C46000AF994 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E47AF620862C46000AF994 /* MainViewController.m */; };
 		55E47B0320862C46000AF994 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E47AFA20862C46000AF994 /* RoundedButton.m */; };
 		55E47B0420862C46000AF994 /* UIView+AppAddon.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E47AFB20862C46000AF994 /* UIView+AppAddon.m */; };
@@ -72,15 +67,6 @@
 		11EB05BB2DA173F487871D87 /* Pods_NeuraSDKSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeuraSDKSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D72E5CA8712A09228D3CDE3 /* Pods-Notifications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notifications.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Notifications/Pods-Notifications.debug.xcconfig"; sourceTree = "<group>"; };
 		556FA9CC1FC183DC004EF535 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = images.xcassets; path = neurasdksampleapp/images.xcassets; sourceTree = SOURCE_ROOT; };
-		55E47AEB20862C45000AF994 /* SubscriptionsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionsListTableViewCell.m; sourceTree = "<group>"; };
-		55E47AEC20862C45000AF994 /* SubscriptionsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionsListTableViewCell.xib; sourceTree = "<group>"; };
-		55E47AED20862C45000AF994 /* SubscriptionsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionsListViewController.m; sourceTree = "<group>"; };
-		55E47AEE20862C45000AF994 /* SubscriptionsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionsListTableViewCell.h; sourceTree = "<group>"; };
-		55E47AEF20862C45000AF994 /* SubscriptionsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionsListViewController.h; sourceTree = "<group>"; };
-		55E47AF120862C45000AF994 /* SendEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendEventsViewController.m; sourceTree = "<group>"; };
-		55E47AF220862C45000AF994 /* SimulateEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulateEventTableViewCell.m; sourceTree = "<group>"; };
-		55E47AF320862C45000AF994 /* SendEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendEventsViewController.h; sourceTree = "<group>"; };
-		55E47AF420862C45000AF994 /* SimulateEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulateEventTableViewCell.h; sourceTree = "<group>"; };
 		55E47AF620862C46000AF994 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		55E47AF720862C46000AF994 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		55E47AF920862C46000AF994 /* UIView+AppAddon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AppAddon.h"; sourceTree = "<group>"; };
@@ -151,31 +137,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		55E47AEA20862C45000AF994 /* Subscriptions */ = {
-			isa = PBXGroup;
-			children = (
-				55E47AEB20862C45000AF994 /* SubscriptionsListTableViewCell.m */,
-				55E47AEC20862C45000AF994 /* SubscriptionsListTableViewCell.xib */,
-				55E47AED20862C45000AF994 /* SubscriptionsListViewController.m */,
-				55E47AEE20862C45000AF994 /* SubscriptionsListTableViewCell.h */,
-				55E47AEF20862C45000AF994 /* SubscriptionsListViewController.h */,
-			);
-			name = Subscriptions;
-			path = neurasdksampleapp/Subscriptions;
-			sourceTree = SOURCE_ROOT;
-		};
-		55E47AF020862C45000AF994 /* sendEvent */ = {
-			isa = PBXGroup;
-			children = (
-				55E47AF120862C45000AF994 /* SendEventsViewController.m */,
-				55E47AF220862C45000AF994 /* SimulateEventTableViewCell.m */,
-				55E47AF320862C45000AF994 /* SendEventsViewController.h */,
-				55E47AF420862C45000AF994 /* SimulateEventTableViewCell.h */,
-			);
-			name = sendEvent;
-			path = neurasdksampleapp/sendEvent;
-			sourceTree = SOURCE_ROOT;
-		};
 		55E47AF520862C46000AF994 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,8 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				55E47AF520862C46000AF994 /* MainVC */,
-				55E47AF020862C45000AF994 /* sendEvent */,
-				55E47AEA20862C45000AF994 /* Subscriptions */,
 				55E47AF820862C46000AF994 /* Utilities */,
 				556FA9CC1FC183DC004EF535 /* images.xcassets */,
 				0877CEB11F39CC990020B59E /* NeuraSDKSampleApp.entitlements */,
@@ -367,7 +326,6 @@
 			files = (
 				65AE5A4C1BA9909400824D2D /* Main.storyboard in Resources */,
 				65A64BAC1B8E13170090FAFB /* LaunchScreen.xib in Resources */,
-				55E47AFE20862C46000AF994 /* SubscriptionsListTableViewCell.xib in Resources */,
 				556FA9CD1FC183DC004EF535 /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,16 +432,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55E47AFD20862C46000AF994 /* SubscriptionsListTableViewCell.m in Sources */,
 				0877CEB01F39AB790020B59E /* PushNotifications.m in Sources */,
 				55E47B0320862C46000AF994 /* RoundedButton.m in Sources */,
 				65A64BA11B8E13170090FAFB /* AppDelegate.m in Sources */,
 				55E47B0220862C46000AF994 /* MainViewController.m in Sources */,
 				55E47B0420862C46000AF994 /* UIView+AppAddon.m in Sources */,
 				65A64B9E1B8E13170090FAFB /* main.m in Sources */,
-				55E47B0120862C46000AF994 /* SimulateEventTableViewCell.m in Sources */,
-				55E47AFF20862C46000AF994 /* SubscriptionsListViewController.m in Sources */,
-				55E47B0020862C46000AF994 /* SendEventsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
