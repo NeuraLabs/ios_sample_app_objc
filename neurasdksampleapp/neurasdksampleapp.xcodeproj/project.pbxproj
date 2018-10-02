@@ -225,7 +225,6 @@
 				08A1AE901F933D060059BFCA /* Sources */,
 				08A1AE911F933D060059BFCA /* Frameworks */,
 				08A1AE921F933D060059BFCA /* Resources */,
-				2234A2D01A8444FD8417EC7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,7 +246,6 @@
 				08A1AEA01F933D060059BFCA /* Embed App Extensions */,
 				556FA9CB1FC18355004EF535 /* Embed Frameworks */,
 				A4126667BC683371FA6EBEC6 /* [CP] Embed Pods Frameworks */,
-				485C8AABB04D438E8B607D02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -333,36 +331,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2234A2D01A8444FD8417EC7F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Notifications/Pods-Notifications-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		485C8AABB04D438E8B607D02 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		58C9FE69A5F6CC75249B8FB6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,7 +355,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-frameworks.sh",
 				"${PODS_ROOT}/NeuraSDKFramework/NeuraSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -396,7 +364,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ECDE6EF0AFBC45D726ECBA2D /* [CP] Check Pods Manifest.lock */ = {
