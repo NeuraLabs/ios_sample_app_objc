@@ -225,6 +225,7 @@
 				08A1AE901F933D060059BFCA /* Sources */,
 				08A1AE911F933D060059BFCA /* Frameworks */,
 				08A1AE921F933D060059BFCA /* Resources */,
+				FDFDD07C6C578CAA8462B4DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +247,7 @@
 				08A1AEA01F933D060059BFCA /* Embed App Extensions */,
 				556FA9CB1FC18355004EF535 /* Embed Frameworks */,
 				A4126667BC683371FA6EBEC6 /* [CP] Embed Pods Frameworks */,
+				1128286038A3868784FC3CBC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,6 +277,9 @@
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = UF894MT86P;
 						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -331,6 +336,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1128286038A3868784FC3CBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		58C9FE69A5F6CC75249B8FB6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,7 +375,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-frameworks.sh",
 				"${PODS_ROOT}/NeuraSDKFramework/NeuraSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -364,7 +384,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeuraSDKSampleApp/Pods-NeuraSDKSampleApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ECDE6EF0AFBC45D726ECBA2D /* [CP] Check Pods Manifest.lock */ = {
@@ -383,6 +403,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDFDD07C6C578CAA8462B4DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Notifications/Pods-Notifications-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
