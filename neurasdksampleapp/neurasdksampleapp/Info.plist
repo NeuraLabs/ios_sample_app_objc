@@ -29,6 +29,10 @@
 	<string>This enables more accurate detection of activity and significant places.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Location data is required to to provide a better experience</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    	<string>Location data is required to to provide a better experience</string>
+    	<key>NSLocationWhenInUseUsageDescription</key>
+    	<string>Location data is required to to provide a better experience</string>
 	<key>NSMotionUsageDescription</key>
 	<string>Motion data is required to provide a better experience</string>
 	<key>UIBackgroundModes</key>
