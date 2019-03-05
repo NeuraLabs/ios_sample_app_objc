@@ -126,9 +126,6 @@
 }
 
 #pragma mark - User alerts
-- (void)showUserNotLoggedInAlert {
-    [self showAlertWithTitle:@"The user is not logged in" message:nil];
-}
 
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
@@ -157,14 +154,6 @@
         [self logoutFromNeura];
     } else {
         [self loginToNeura];
-    }
-}
-
-- (IBAction)openNeuraSettingsPanelButtonClick:(id)sender {
-    if (NeuraSDK.shared.isAuthenticated) {
-        [NeuraSDK.shared openNeuraSettingsPanel];
-    } else {
-        [self showUserNotLoggedInAlert];
     }
 }
 
