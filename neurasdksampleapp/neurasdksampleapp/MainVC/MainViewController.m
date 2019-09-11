@@ -11,12 +11,13 @@
 #import "UIView+AppAddon.h"
 #import "PushNotifications.h"
 
-@interface MainViewController ()
+@interface MainViewController () <NeuraAuthenticationDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UILabel *appVersionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sdkVersionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *neuraStatusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *accessToken;
 
 @property (strong, nonatomic) IBOutlet UIImageView *neuraSymbolTopmImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *neuraSymbolBottomImageView;
@@ -30,6 +31,7 @@
 #pragma mark - VC Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NeuraSDK.shared.authenticationDelegate = self;
     [self setupUI];
 }
 
@@ -47,7 +49,7 @@
         case NeuraAuthStateAuthenticatedAnonymously:
             title = @"Disconnect";
             break;
-        case NeuraAuthStateAccessTokenRequested:
+        case NeuraAuthStateRequestingAuthenticationFromServer:
             title = @"Connecting...";
             break;
         default:
@@ -63,7 +65,7 @@
     NSString *text;
     UIColor *color;
     switch (authState) {
-        case NeuraAuthStateAccessTokenRequested:
+        case NeuraAuthStateRequestingAuthenticationFromServer:
             color = [UIColor blueColor];
             text = @"Requested tokens...";
             break;
@@ -72,7 +74,7 @@
             color = [UIColor colorWithRed:0 green:0.4 blue:0 alpha:1.0];
             text = [NeuraSDK.shared neuraUserId];
             break;
-        case NeuraAuthStateFailedReceivingAccessToken:
+        case NeuraAuthStateFailed:
             color = [UIColor redColor];
             text = @"Failed receiving tokens";
             break;
@@ -156,5 +158,15 @@
         [self loginToNeura];
     }
 }
+
+#pragma mark - NeuraAuthenticationDelegate
+- (void)neuraAuthenticationStateChanged:(NeuraAuthState)newState {
+    [self updateAuthenticationLabelState];
+}
+
+- (void)neuraAccessTokenChanged:(NSString *)newAccessToken {
+    _accessToken.text = newAccessToken;
+}
+
 
 @end
